@@ -1,0 +1,180 @@
+import { useState } from "react";
+import { X, Calendar, User, Phone, MapPin, CheckCircle } from "lucide-react";
+
+interface BookingModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  carName?: string;
+}
+
+export default function BookingModal({ isOpen, onClose, carName }: BookingModalProps) {
+  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    phone: "",
+    startDate: "",
+    endDate: "",
+    location: "",
+  });
+
+  if (!isOpen) return null;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
+
+  const handleClose = () => {
+    setSubmitted(false);
+    setForm({ name: "", phone: "", startDate: "", endDate: "", location: "" });
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4" data-testid="booking-modal">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={handleClose} />
+      <div className="relative bg-card border border-card-border rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+        <div className="flex items-center justify-between p-5 border-b border-border">
+          <div>
+            <h2 className="text-lg font-bold text-foreground">حجز السيارة</h2>
+            {carName && <p className="text-sm text-muted-foreground mt-0.5">{carName}</p>}
+          </div>
+          <button
+            onClick={handleClose}
+            className="p-2 rounded-lg hover:bg-secondary transition-colors"
+            data-testid="button-close-modal"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="p-5">
+          {submitted ? (
+            <div className="flex flex-col items-center text-center py-8 gap-4" data-testid="booking-success">
+              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
+                <CheckCircle className="w-9 h-9 text-green-500" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-foreground mb-2">تم الحجز بنجاح!</h3>
+                <p className="text-sm text-muted-foreground">
+                  سيتواصل معك فريقنا خلال ساعات لتأكيد الحجز
+                </p>
+              </div>
+              <button
+                onClick={handleClose}
+                className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold transition-all"
+                data-testid="button-close-success"
+              >
+                حسناً
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-booking">
+              <div>
+                <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                  الاسم الكامل
+                </label>
+                <div className="relative">
+                  <User className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    required
+                    placeholder="أدخل اسمك الكامل"
+                    value={form.name}
+                    onChange={(e) => setForm({ ...form, name: e.target.value })}
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    data-testid="input-name"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                  رقم الهاتف
+                </label>
+                <div className="relative">
+                  <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="tel"
+                    required
+                    placeholder="05XXXXXXXX"
+                    value={form.phone}
+                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    data-testid="input-phone"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                    تاريخ البداية
+                  </label>
+                  <div className="relative">
+                    <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <input
+                      type="date"
+                      required
+                      value={form.startDate}
+                      onChange={(e) => setForm({ ...form, startDate: e.target.value })}
+                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      data-testid="input-start-date"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                    تاريخ النهاية
+                  </label>
+                  <div className="relative">
+                    <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                    <input
+                      type="date"
+                      required
+                      value={form.endDate}
+                      onChange={(e) => setForm({ ...form, endDate: e.target.value })}
+                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      data-testid="input-end-date"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                  موقع الاستلام
+                </label>
+                <div className="relative">
+                  <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <select
+                    required
+                    value={form.location}
+                    onChange={(e) => setForm({ ...form, location: e.target.value })}
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 appearance-none"
+                    data-testid="select-location"
+                  >
+                    <option value="">اختر موقع الاستلام</option>
+                    <option value="riyadh">الرياض - المكتب الرئيسي</option>
+                    <option value="airport">مطار الملك خالد الدولي</option>
+                    <option value="jeddah">جدة</option>
+                    <option value="dammam">الدمام</option>
+                    <option value="delivery">توصيل للمنزل</option>
+                  </select>
+                </div>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-base transition-all duration-200 shadow hover:shadow-md mt-2"
+                data-testid="button-submit-booking"
+              >
+                تأكيد الحجز
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
