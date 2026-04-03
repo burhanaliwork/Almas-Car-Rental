@@ -20,12 +20,16 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" data-testid="link-logo">
-            <div className="flex items-center gap-2 group cursor-pointer">
+            <div className="flex items-center gap-3 group cursor-pointer">
               <img
                 src="/logo-gem.png"
                 alt="الماس لتأجير السيارات"
                 className="w-14 h-14 lg:w-16 lg:h-16 object-contain group-hover:scale-105 transition-all duration-300"
               />
+              <div className="leading-tight">
+                <p className="text-base lg:text-lg font-black text-foreground tracking-tight">الماس</p>
+                <p className="text-xs text-muted-foreground font-medium">لتأجير السيارات</p>
+              </div>
             </div>
           </Link>
 
