@@ -22,9 +22,9 @@ export default function Header() {
           <Link href="/" data-testid="link-logo">
             <div className="flex items-center gap-2 group cursor-pointer">
               <img
-                src="/logo.jpg"
+                src="/logo-gem.png"
                 alt="الماس لتأجير السيارات"
-                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover shadow-md group-hover:shadow-lg transition-all duration-300"
+                className="w-14 h-14 lg:w-16 lg:h-16 object-contain group-hover:scale-105 transition-all duration-300"
               />
             </div>
           </Link>
