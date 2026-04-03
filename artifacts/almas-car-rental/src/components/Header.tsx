@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Phone, Diamond } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "الرئيسية" },
@@ -15,19 +15,17 @@ export default function Header() {
   const [location] = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border shadow-sm" data-testid="header">
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-sm" data-testid="header">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" data-testid="link-logo">
-            <div className="flex items-center gap-3 group cursor-pointer">
-              <div className="relative w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 shadow-md group-hover:shadow-amber-200 transition-all duration-300">
-                <Diamond className="w-5 h-5 lg:w-6 lg:h-6 text-white fill-white" />
-              </div>
-              <div className="leading-tight">
-                <p className="text-base lg:text-lg font-black text-foreground tracking-tight">الماس</p>
-                <p className="text-xs text-muted-foreground font-medium">لتأجير السيارات</p>
-              </div>
+            <div className="flex items-center gap-2 group cursor-pointer">
+              <img
+                src="/logo.jpg"
+                alt="الماس لتأجير السيارات"
+                className="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover shadow-md group-hover:shadow-lg transition-all duration-300"
+              />
             </div>
           </Link>
 
@@ -73,7 +71,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden border-t border-border bg-white" data-testid="nav-mobile">
+        <div className="lg:hidden border-t border-border bg-background" data-testid="nav-mobile">
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} data-testid={`mobile-nav-link-${link.label}`}>

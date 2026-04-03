@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Calendar, User, Phone, MapPin, CheckCircle } from "lucide-react";
+import { X, Calendar, User, Phone, CheckCircle } from "lucide-react";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -14,7 +14,6 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
     phone: "",
     startDate: "",
     endDate: "",
-    location: "",
   });
 
   if (!isOpen) return null;
@@ -26,7 +25,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
   const handleClose = () => {
     setSubmitted(false);
-    setForm({ name: "", phone: "", startDate: "", endDate: "", location: "" });
+    setForm({ name: "", phone: "", startDate: "", endDate: "" });
     onClose();
   };
 
@@ -138,29 +137,6 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                       data-testid="input-end-date"
                     />
                   </div>
-                </div>
-              </div>
-
-              <div>
-                <label className="text-sm font-semibold text-foreground mb-1.5 block">
-                  موقع الاستلام
-                </label>
-                <div className="relative">
-                  <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <select
-                    required
-                    value={form.location}
-                    onChange={(e) => setForm({ ...form, location: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400 appearance-none"
-                    data-testid="select-location"
-                  >
-                    <option value="">اختر موقع الاستلام</option>
-                    <option value="riyadh">الرياض - المكتب الرئيسي</option>
-                    <option value="airport">مطار الملك خالد الدولي</option>
-                    <option value="jeddah">جدة</option>
-                    <option value="dammam">الدمام</option>
-                    <option value="delivery">توصيل للمنزل</option>
-                  </select>
                 </div>
               </div>
 
