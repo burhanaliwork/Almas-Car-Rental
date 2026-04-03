@@ -36,9 +36,9 @@ const categories = [
     label: "الرياضية",
     icon: Zap,
     desc: "أداء استثنائي وسرعات خيالية",
-    image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&auto=format&fit=crop&q=80",
+    image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
     gradient: "from-red-600 to-orange-500",
-    startPrice: 175000,
+    startPrice: 100000,
   },
   {
     href: "/economy",

@@ -75,7 +75,7 @@ export default function CategoryPage({
           </span>
           <span className="text-sm text-muted-foreground">
             من <span className="font-bold text-amber-500">{minPrice.toLocaleString("ar-SA")}</span> إلى{" "}
-            <span className="font-bold text-amber-500">{maxPrice.toLocaleString("ar-SA")}</span> ريال/يوم
+            <span className="font-bold text-amber-500">{maxPrice.toLocaleString("ar-SA")}</span> دينار/يوم
           </span>
           <div className="flex items-center gap-2 mr-auto">
             <SlidersHorizontal className="w-4 h-4 text-muted-foreground" />
