@@ -38,7 +38,7 @@ const categories = [
     desc: "أداء استثنائي وسرعات خيالية",
     image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=600&auto=format&fit=crop&q=80",
     gradient: "from-red-600 to-orange-500",
-    startPrice: 1500,
+    startPrice: 175000,
   },
   {
     href: "/economy",
@@ -47,7 +47,7 @@ const categories = [
     desc: "اقتصادية وموثوقة لرحلاتك اليومية",
     image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&auto=format&fit=crop&q=80",
     gradient: "from-green-600 to-teal-500",
-    startPrice: 120,
+    startPrice: 30000,
   },
   {
     href: "/family",
@@ -56,7 +56,7 @@ const categories = [
     desc: "واسعة ومريحة لكل العائلة",
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&auto=format&fit=crop&q=80",
     gradient: "from-blue-600 to-cyan-500",
-    startPrice: 400,
+    startPrice: 90000,
   },
   {
     href: "/vip",
@@ -65,7 +65,7 @@ const categories = [
     desc: "الفخامة والرقي لكبار الشخصيات",
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&auto=format&fit=crop&q=80",
     gradient: "from-purple-600 to-pink-500",
-    startPrice: 1800,
+    startPrice: 250000,
   },
 ];
 
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-sm font-semibold mb-6" data-testid="badge-hero">
               <Star className="w-3.5 h-3.5 fill-amber-400" />
-              الأول في تأجير السيارات بالمملكة
+              الأول في تأجير السيارات في الموصل
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6" data-testid="text-hero-title">
               تأجير سيارات
@@ -131,7 +131,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed" data-testid="text-hero-desc">
-              أسطول ضخم من السيارات الرياضية والاقتصادية والعائلية وVIP. احجز الآن واستمتع بأفضل تجربة قيادة في المملكة العربية السعودية.
+              أسطول ضخم من السيارات الرياضية والاقتصادية والعائلية وVIP. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
@@ -200,7 +200,7 @@ export default function Home() {
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-muted-foreground">يبدأ من</span>
                       <span className="font-black text-amber-500 text-base">
-                        {cat.startPrice.toLocaleString("ar-SA")} ريال/يوم
+                        {cat.startPrice.toLocaleString("ar-SA")} دينار/يوم
                       </span>
                     </div>
                     <div className="flex items-center gap-1 mt-3 text-amber-500 font-bold text-sm group-hover:gap-2 transition-all">
@@ -310,6 +310,96 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location */}
+      <section className="py-20 bg-background" data-testid="section-location">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-600 text-sm font-semibold mb-4">
+              <MapPin className="w-4 h-4" />
+              تجدنا هنا
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-3" data-testid="text-location-title">
+              موقعنا
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              موقعنا في الموصل – حي البريد
+            </p>
+          </div>
+
+          <div className="bg-card border border-card-border rounded-3xl overflow-hidden shadow-lg">
+            {/* Header Card */}
+            <div className="bg-gradient-to-l from-amber-500 to-amber-600 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-white font-black text-lg leading-tight">شركة الماس لتأجير السيارات</h3>
+                  <p className="text-amber-100 text-sm mt-0.5">الموصل – حي البريد، محافظة نينوى</p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/place/95PH%2BHJW+%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D8%B3+%D9%84%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/@36.3864177,43.177547,15z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-amber-600 hover:bg-amber-50 font-bold text-sm transition-all duration-200 shadow whitespace-nowrap shrink-0"
+                data-testid="link-open-maps"
+              >
+                <MapPin className="w-4 h-4" />
+                فتح الموقع على Google Maps
+              </a>
+            </div>
+
+            {/* Map Embed */}
+            <div className="w-full h-72 sm:h-96 lg:h-[420px] relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512.29!2d43.1765!3d36.3864202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4007bf005aa99a53%3A0x5ed539e930e15b71!2z2LPYsdmJzZip2Knam2jYuyDYp9mE2YXYs9mE2LQg2YTYqtCj2KzYp9qv2LEg2LnYs9mK2KfYsdi2INin2YTYs9mK2KfYsdi2!5e0!3m2!1sar!2siq!4v1711234567890!5m2!1sar!2siq"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="موقع شركة الماس لتأجير السيارات"
+                data-testid="iframe-google-maps"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+
+            {/* Info Row */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x-reverse sm:divide-x border-t border-border">
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4 text-amber-500" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">العنوان</p>
+                  <p className="text-sm font-semibold text-foreground">الموصل – حي البريد</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-amber-500" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">للتواصل</p>
+                  <p className="text-sm font-semibold text-foreground">+964 770 000 0000</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4 text-amber-500" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">ساعات العمل</p>
+                  <p className="text-sm font-semibold text-foreground">24 ساعة / 7 أيام</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -75,7 +75,7 @@ export default function CarCard({
             <p className="text-2xl font-black text-amber-500" data-testid={`text-price-${name}`}>
               {pricePerDay.toLocaleString("ar-SA")}
             </p>
-            <p className="text-xs text-muted-foreground">ريال / يوم</p>
+            <p className="text-xs text-muted-foreground">دينار / يوم</p>
           </div>
           <button
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"

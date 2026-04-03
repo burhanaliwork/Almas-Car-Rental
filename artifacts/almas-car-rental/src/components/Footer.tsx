@@ -62,17 +62,17 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-400">+966 50 000 0000</p>
-                  <p className="text-sm text-gray-400">+966 11 000 0000</p>
+                  <p className="text-sm text-gray-400">+964 770 000 0000</p>
+                  <p className="text-sm text-gray-400">+964 750 000 0000</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
-                <p className="text-sm text-gray-400">info@almas-rental.sa</p>
+                <p className="text-sm text-gray-400">info@almas-rental.iq</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
-                <p className="text-sm text-gray-400">الرياض، المملكة العربية السعودية</p>
+                <p className="text-sm text-gray-400">الموصل – حي البريد، محافظة نينوى</p>
               </li>
             </ul>
           </div>
