@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Calendar, User, CheckCircle } from "lucide-react";
+import { X, Calendar, User, MapPin, FileText, CheckCircle } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/9647735256513";
 const TODAY = new Date().toISOString().split("T")[0];
@@ -16,6 +16,8 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
     name: "",
     startDate: "",
     endDate: "",
+    location: "",
+    purpose: "",
   });
 
   if (!isOpen) return null;
@@ -27,7 +29,9 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
       `🚗 السيارة: ${carName || "غير محدد"}\n` +
       `👤 اسم الزبون: ${form.name}\n` +
       `📅 تاريخ البداية: ${form.startDate}\n` +
-      `📅 تاريخ الانتهاء: ${form.endDate}`
+      `📅 تاريخ الانتهاء: ${form.endDate}\n` +
+      `📍 موقع الاستخدام: ${form.location}\n` +
+      `📋 الغرض من الاستخدام: ${form.purpose}`
     );
     window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
     setSubmitted(true);
@@ -35,7 +39,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
   const handleClose = () => {
     setSubmitted(false);
-    setForm({ name: "", startDate: "", endDate: "" });
+    setForm({ name: "", startDate: "", endDate: "", location: "", purpose: "" });
     onClose();
   };
 
@@ -79,6 +83,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4" data-testid="form-booking">
+              {/* الاسم */}
               <div>
                 <label className="text-sm font-semibold text-foreground mb-1.5 block">
                   الاسم الكامل
@@ -97,6 +102,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                 </div>
               </div>
 
+              {/* التواريخ */}
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-sm font-semibold text-foreground mb-1.5 block">
@@ -131,6 +137,51 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                       data-testid="input-end-date"
                     />
                   </div>
+                </div>
+              </div>
+
+              {/* موقع الاستخدام */}
+              <div>
+                <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                  موقع الاستخدام
+                </label>
+                <div className="relative">
+                  <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
+                    required
+                    placeholder="أدخل موقع أو منطقة الاستخدام"
+                    value={form.location}
+                    onChange={(e) => setForm({ ...form, location: e.target.value })}
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+                    data-testid="input-location"
+                  />
+                </div>
+              </div>
+
+              {/* الغرض من الاستخدام */}
+              <div>
+                <label className="text-sm font-semibold text-foreground mb-1.5 block">
+                  الغرض من الاستخدام
+                </label>
+                <div className="relative">
+                  <FileText className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                  <select
+                    required
+                    value={form.purpose}
+                    onChange={(e) => setForm({ ...form, purpose: e.target.value })}
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black appearance-none"
+                    data-testid="select-purpose"
+                  >
+                    <option value="">اختر الغرض من الاستخدام</option>
+                    <option value="سفر داخلي">سفر داخلي</option>
+                    <option value="سفر خارجي">سفر خارجي</option>
+                    <option value="عمل ومهام رسمية">عمل ومهام رسمية</option>
+                    <option value="مناسبة عائلية">مناسبة عائلية</option>
+                    <option value="زيارة طبية">زيارة طبية</option>
+                    <option value="سياحة وترفيه">سياحة وترفيه</option>
+                    <option value="أخرى">أخرى</option>
+                  </select>
                 </div>
               </div>
 

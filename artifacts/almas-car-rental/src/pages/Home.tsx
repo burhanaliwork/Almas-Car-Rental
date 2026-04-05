@@ -424,22 +424,11 @@ export default function Home() {
             >
               احجز الآن
             </a>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 px-10 py-4 rounded-2xl bg-gray-800 border-2 border-gray-600 hover:bg-gray-700 text-white font-bold text-base transition-all"
-              data-testid="link-final-call"
-            >
-              <Phone className="w-5 h-5" />
-              اتصل الآن
-            </a>
           </div>
           <div className="flex flex-wrap justify-center gap-6 mt-10">
             {[
               "أسعار تنافسية",
               "توصيل مجاني",
-              "ضمان شامل",
               "خدمة 24/7",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white font-semibold text-sm">
