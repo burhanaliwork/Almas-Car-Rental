@@ -132,15 +132,13 @@ export default function Home() {
               أسطول ضخم من السيارات الرياضية والسيدات الاقتصادية والعائلية والفاخرة. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => document.getElementById("categories")?.scrollIntoView({ behavior: "smooth" })}
                 className="px-8 py-4 rounded-2xl bg-white hover:bg-gray-100 text-gray-900 font-black text-base transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95"
                 data-testid="button-hero-book"
               >
                 احجز سيارتك الآن
-              </a>
+              </button>
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
@@ -209,21 +207,6 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="w-full h-72 sm:h-96 lg:h-[420px] relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512.29!2d43.1765!3d36.3864202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4007bf005aa99a53%3A0x5ed539e930e15b71!2z2LPYsdmJzZip2Knam2jYuyDYp9mE2YXYs9mE2LQg2YTYqtCj2KzYp9qv2LEg2LnYs9mK2KfYsdi2INin2YTYs9mK2KfYsdi2!5e0!3m2!1sar!2siq!4v1711234567890!5m2!1sar!2siq"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="موقع شركة الماس لتأجير السيارات"
-                data-testid="iframe-google-maps"
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-
             <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x-reverse sm:divide-x border-t border-border">
               <div className="flex items-center gap-3 p-4">
                 <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
@@ -258,7 +241,7 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-20 bg-gray-50" data-testid="section-categories">
+      <section id="categories" className="py-20 bg-gray-50" data-testid="section-categories">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-4" data-testid="text-categories-title">
