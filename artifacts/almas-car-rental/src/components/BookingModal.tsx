@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { X, Calendar, User, Phone, CheckCircle } from "lucide-react";
+import { X, Calendar, User, CheckCircle } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/9647735256513";
-const TODAY = "2026-04-05";
+const TODAY = new Date().toISOString().split("T")[0];
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -14,7 +14,6 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: "",
-    phone: "",
     startDate: "",
     endDate: "",
   });
@@ -24,11 +23,11 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = encodeURIComponent(
-      `مرحباً، أرغب بحجز سيارة${carName ? ` (${carName})` : ""}.\n` +
-      `الاسم: ${form.name}\n` +
-      `رقم الهاتف: ${form.phone}\n` +
-      `تاريخ البداية: ${form.startDate}\n` +
-      `تاريخ النهاية: ${form.endDate}`
+      `مرحباً، أرغب بحجز سيارة.\n` +
+      `🚗 السيارة: ${carName || "غير محدد"}\n` +
+      `👤 اسم الزبون: ${form.name}\n` +
+      `📅 تاريخ البداية: ${form.startDate}\n` +
+      `📅 تاريخ الانتهاء: ${form.endDate}`
     );
     window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
     setSubmitted(true);
@@ -36,7 +35,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
   const handleClose = () => {
     setSubmitted(false);
-    setForm({ name: "", phone: "", startDate: "", endDate: "" });
+    setForm({ name: "", startDate: "", endDate: "" });
     onClose();
   };
 
@@ -98,24 +97,6 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                 </div>
               </div>
 
-              <div>
-                <label className="text-sm font-semibold text-foreground mb-1.5 block">
-                  رقم الهاتف
-                </label>
-                <div className="relative">
-                  <Phone className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="tel"
-                    required
-                    placeholder="07XXXXXXXXX"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                    data-testid="input-phone"
-                  />
-                </div>
-              </div>
-
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label className="text-sm font-semibold text-foreground mb-1.5 block">
@@ -136,7 +117,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                 </div>
                 <div>
                   <label className="text-sm font-semibold text-foreground mb-1.5 block">
-                    تاريخ النهاية
+                    تاريخ الانتهاء
                   </label>
                   <div className="relative">
                     <Calendar className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -158,7 +139,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                 className="w-full py-3 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-base transition-all duration-200 shadow hover:shadow-md mt-2"
                 data-testid="button-submit-booking"
               >
-                تأكيد الحجز عبر الواتساب
+                إتمام الحجز
               </button>
             </form>
           )}

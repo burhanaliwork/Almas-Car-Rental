@@ -99,19 +99,19 @@ export default function CategoryPage({
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredCars.map((car) => (
-              <div key={car.id} onClick={() => handleBook(car.name)} className="cursor-pointer">
-                <CarCard
-                  name={car.name}
-                  image={car.image}
-                  pricePerDay={car.pricePerDay}
-                  seats={car.seats}
-                  fuelType={car.fuelType}
-                  speed={car.speed}
-                  rating={car.rating}
-                  badge={car.badge}
-                  badgeColor={car.badgeColor}
-                />
-              </div>
+              <CarCard
+                key={car.id}
+                name={car.name}
+                image={car.image}
+                pricePerDay={car.pricePerDay}
+                seats={car.seats}
+                fuelType={car.fuelType}
+                speed={car.speed}
+                rating={car.rating}
+                badge={car.badge}
+                badgeColor={car.badgeColor}
+                onBook={() => handleBook(car.name)}
+              />
             ))}
           </div>
         </div>

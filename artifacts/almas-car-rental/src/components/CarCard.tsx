@@ -1,6 +1,4 @@
-import { Users, Fuel, Gauge, Star, MessageCircle } from "lucide-react";
-
-const WHATSAPP_URL = "https://wa.me/9647735256513";
+import { Users, Fuel, Gauge, Star, Calendar } from "lucide-react";
 
 interface CarCardProps {
   name: string;
@@ -12,6 +10,7 @@ interface CarCardProps {
   rating: number;
   badge?: string;
   badgeColor?: string;
+  onBook?: () => void;
 }
 
 export default function CarCard({
@@ -24,13 +23,8 @@ export default function CarCard({
   rating,
   badge,
   badgeColor = "bg-gray-900",
+  onBook,
 }: CarCardProps) {
-  const handleBook = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    const msg = encodeURIComponent(`مرحباً، أرغب بحجز سيارة ${name} بسعر ${pricePerDay.toLocaleString("ar-SA")} دينار/يوم.`);
-    window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
-  };
-
   return (
     <div
       className="bg-card border border-card-border rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
@@ -86,11 +80,14 @@ export default function CarCard({
             <p className="text-xs text-muted-foreground">دينار / يوم</p>
           </div>
           <button
-            onClick={handleBook}
+            onClick={(e) => {
+              e.stopPropagation();
+              onBook?.();
+            }}
             className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"
             data-testid={`button-book-${name}`}
           >
-            <MessageCircle className="w-4 h-4" />
+            <Calendar className="w-4 h-4" />
             احجز الآن
           </button>
         </div>
