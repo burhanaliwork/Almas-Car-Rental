@@ -1,32 +1,32 @@
-import { useState } from "react";
 import { Link } from "wouter";
-import { Shield, Clock, MapPin, Star, ChevronLeft, Zap, Users, Gem, Car, Phone, CheckCircle } from "lucide-react";
-import BookingModal from "@/components/BookingModal";
+import { Shield, Clock, MapPin, Star, ChevronLeft, Zap, Users, Gem, Car, Phone, CheckCircle, Award } from "lucide-react";
+
+const WHATSAPP_URL = "https://wa.me/9647735256513";
 
 const features = [
   {
     icon: Shield,
     title: "ضمان الجودة",
     desc: "جميع سياراتنا مؤمنة بالكامل وتخضع لفحص دوري",
-    color: "bg-blue-50 text-blue-600",
+    color: "bg-gray-100 text-gray-700",
   },
   {
     icon: Clock,
     title: "خدمة 24/7",
     desc: "متاحون على مدار الساعة لخدمتك في أي وقت",
-    color: "bg-amber-50 text-amber-600",
+    color: "bg-gray-100 text-gray-700",
   },
   {
     icon: MapPin,
     title: "توصيل مجاني",
     desc: "نوصل السيارة لأي مكان تختاره في المدينة",
-    color: "bg-green-50 text-green-600",
+    color: "bg-gray-100 text-gray-700",
   },
   {
     icon: Star,
     title: "أسعار تنافسية",
     desc: "أفضل الأسعار مع أعلى مستويات الجودة والراحة",
-    color: "bg-purple-50 text-purple-600",
+    color: "bg-gray-100 text-gray-700",
   },
 ];
 
@@ -37,7 +37,7 @@ const categories = [
     icon: Zap,
     desc: "أداء استثنائي وسرعات خيالية",
     image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
-    gradient: "from-red-600 to-orange-500",
+    gradient: "from-gray-900 to-gray-700",
     startPrice: 100000,
   },
   {
@@ -46,7 +46,7 @@ const categories = [
     icon: Car,
     desc: "اقتصادية وموثوقة لرحلاتك اليومية",
     image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&auto=format&fit=crop&q=80",
-    gradient: "from-green-600 to-teal-500",
+    gradient: "from-gray-800 to-gray-600",
     startPrice: 30000,
   },
   {
@@ -55,7 +55,7 @@ const categories = [
     icon: Users,
     desc: "واسعة ومريحة لكل العائلة",
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&auto=format&fit=crop&q=80",
-    gradient: "from-blue-600 to-cyan-500",
+    gradient: "from-gray-900 to-gray-700",
     startPrice: 90000,
   },
   {
@@ -64,7 +64,7 @@ const categories = [
     icon: Gem,
     desc: "الفخامة والرقي لكبار الشخصيات",
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&auto=format&fit=crop&q=80",
-    gradient: "from-purple-600 to-pink-500",
+    gradient: "from-gray-900 to-gray-600",
     startPrice: 250000,
   },
 ];
@@ -95,38 +95,36 @@ const testimonials = [
 
 const stats = [
   { value: "+5000", label: "عميل سعيد" },
-  { value: "+200", label: "سيارة متاحة" },
-  { value: "15+", label: "سنة خبرة" },
+  { value: "+99", label: "سيارة متاحة" },
+  { value: "+3", label: "سنوات خبرة" },
   { value: "4.9", label: "تقييم العملاء" },
 ];
 
 export default function Home() {
-  const [bookingOpen, setBookingOpen] = useState(false);
-
   return (
     <main dir="rtl">
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="section-hero">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black z-0" />
         <div
-          className="absolute inset-0 opacity-30 z-0"
+          className="absolute inset-0 opacity-20 z-0"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&auto=format&fit=crop&q=80')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/80 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80 z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 w-full">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-sm font-semibold mb-6" data-testid="badge-hero">
-              <Star className="w-3.5 h-3.5 fill-amber-400" />
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold mb-6" data-testid="badge-hero">
+              <Star className="w-3.5 h-3.5 fill-white" />
               الأول في تأجير السيارات في الموصل
             </span>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-6" data-testid="text-hero-title">
               تأجير سيارات
-              <span className="block text-transparent bg-clip-text bg-gradient-to-l from-amber-400 to-amber-200">
+              <span className="block text-gray-300">
                 فاخرة وموثوقة
               </span>
             </h1>
@@ -134,15 +132,19 @@ export default function Home() {
               أسطول ضخم من السيارات الرياضية والاقتصادية والعائلية وVIP. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
             </p>
             <div className="flex flex-wrap gap-4">
-              <button
-                onClick={() => setBookingOpen(true)}
-                className="px-8 py-4 rounded-2xl bg-amber-500 hover:bg-amber-400 text-gray-900 font-black text-base transition-all duration-200 shadow-lg hover:shadow-amber-500/30 hover:shadow-2xl active:scale-95"
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-2xl bg-white hover:bg-gray-100 text-gray-900 font-black text-base transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95"
                 data-testid="button-hero-book"
               >
                 احجز سيارتك الآن
-              </button>
+              </a>
               <a
-                href="tel:+966500000000"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold text-base transition-all duration-200"
                 data-testid="link-hero-call"
               >
@@ -155,21 +157,108 @@ export default function Home() {
       </section>
 
       {/* Stats */}
-      <section className="bg-amber-500 py-10" data-testid="section-stats">
+      <section className="bg-black py-10" data-testid="section-stats">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center" data-testid={`stat-${stat.label}`}>
                 <p className="text-3xl lg:text-4xl font-black text-white mb-1">{stat.value}</p>
-                <p className="text-amber-100 text-sm font-medium">{stat.label}</p>
+                <p className="text-gray-400 text-sm font-medium">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Location */}
+      <section className="py-20 bg-background" data-testid="section-location">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 text-gray-700 text-sm font-semibold mb-4">
+              <MapPin className="w-4 h-4" />
+              تجدنا هنا
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-3" data-testid="text-location-title">
+              موقعنا
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              موقعنا في الموصل – حي البريد
+            </p>
+          </div>
+
+          <div className="bg-card border border-card-border rounded-3xl overflow-hidden shadow-lg">
+            <div className="bg-black p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
+                  <MapPin className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-white font-black text-lg leading-tight">شركة الماس لتأجير السيارات</h3>
+                  <p className="text-gray-300 text-sm mt-0.5">الموصل – حي البريد، محافظة نينوى</p>
+                </div>
+              </div>
+              <a
+                href="https://www.google.com/maps/place/95PH%2BHJW+%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D8%B3+%D9%84%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/@36.3864177,43.177547,15z"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-gray-900 hover:bg-gray-100 font-bold text-sm transition-all duration-200 shadow whitespace-nowrap shrink-0"
+                data-testid="link-open-maps"
+              >
+                <MapPin className="w-4 h-4" />
+                فتح الموقع على Google Maps
+              </a>
+            </div>
+
+            <div className="w-full h-72 sm:h-96 lg:h-[420px] relative">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512.29!2d43.1765!3d36.3864202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4007bf005aa99a53%3A0x5ed539e930e15b71!2z2LPYsdmJzZip2Knam2jYuyDYp9mE2YXYs9mE2LQg2YTYqtCj2KzYp9qv2LEg2LnYs9mK2KfYsdi2INin2YTYs9mK2KfYsdi2!5e0!3m2!1sar!2siq!4v1711234567890!5m2!1sar!2siq"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="موقع شركة الماس لتأجير السيارات"
+                data-testid="iframe-google-maps"
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x-reverse sm:divide-x border-t border-border">
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4 text-gray-700" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">العنوان</p>
+                  <p className="text-sm font-semibold text-foreground">الموصل – حي البريد</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4 text-gray-700" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">للتواصل</p>
+                  <p className="text-sm font-semibold text-foreground">+964 773 525 6513</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 p-4">
+                <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4 text-gray-700" />
+                </div>
+                <div>
+                  <p className="text-xs text-muted-foreground">ساعات العمل</p>
+                  <p className="text-sm font-semibold text-foreground">24 ساعة / 7 أيام</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Categories */}
-      <section className="py-20 bg-background" data-testid="section-categories">
+      <section className="py-20 bg-gray-50" data-testid="section-categories">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-4" data-testid="text-categories-title">
@@ -189,7 +278,7 @@ export default function Home() {
                       alt={cat.label}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className={`absolute inset-0 bg-gradient-to-t ${cat.gradient} opacity-60`} />
+                    <div className={`absolute inset-0 bg-gradient-to-t ${cat.gradient} opacity-70`} />
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
                       <cat.icon className="w-10 h-10 mb-2 drop-shadow-lg" />
                       <h3 className="text-xl font-black drop-shadow-lg">{cat.label}</h3>
@@ -199,11 +288,11 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground mb-2">{cat.desc}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-xs text-muted-foreground">يبدأ من</span>
-                      <span className="font-black text-amber-500 text-base">
+                      <span className="font-black text-gray-900 text-base">
                         {cat.startPrice.toLocaleString("ar-SA")} دينار/يوم
                       </span>
                     </div>
-                    <div className="flex items-center gap-1 mt-3 text-amber-500 font-bold text-sm group-hover:gap-2 transition-all">
+                    <div className="flex items-center gap-1 mt-3 text-gray-800 font-bold text-sm group-hover:gap-2 transition-all">
                       <span>استعرض السيارات</span>
                       <ChevronLeft className="w-4 h-4" />
                     </div>
@@ -216,14 +305,14 @@ export default function Home() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-secondary/30" data-testid="section-features">
+      <section className="py-20 bg-background" data-testid="section-features">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-4">
               لماذا تختار الماس؟
             </h2>
             <p className="text-muted-foreground">
-              نحن ملتزمون بتقديم أفضل خدمة تأجير سيارات في المملكة
+              نحن ملتزمون بتقديم أفضل خدمة تأجير سيارات في الموصل والعراق
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -245,7 +334,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section className="py-20 bg-background" data-testid="section-how-it-works">
+      <section className="py-20 bg-gray-50" data-testid="section-how-it-works">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-4">
@@ -259,7 +348,7 @@ export default function Home() {
               { step: "3", title: "استمتع بالرحلة", desc: "نوصل لك السيارة وتبدأ مغامرتك على الطريق" },
             ].map((item) => (
               <div key={item.step} className="text-center" data-testid={`step-${item.step}`}>
-                <div className="w-16 h-16 rounded-full bg-amber-500 text-white font-black text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-200">
+                <div className="w-16 h-16 rounded-full bg-black text-white font-black text-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
@@ -268,13 +357,15 @@ export default function Home() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="px-10 py-4 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-black text-base transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-4 rounded-2xl bg-black hover:bg-gray-800 text-white font-black text-base transition-all duration-200 shadow-lg hover:shadow-xl active:scale-95 inline-block"
               data-testid="button-cta-book"
             >
               احجز الآن
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -295,12 +386,12 @@ export default function Home() {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {Array.from({ length: t.rating }).map((_, j) => (
-                    <Star key={j} className="w-4 h-4 text-amber-400 fill-amber-400" />
+                    <Star key={j} className="w-4 h-4 text-white fill-white" />
                   ))}
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed mb-5">{t.text}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center text-white font-bold">
+                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-900 font-bold">
                     {t.avatar}
                   </div>
                   <div>
@@ -314,116 +405,30 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Location */}
-      <section className="py-20 bg-background" data-testid="section-location">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-600 text-sm font-semibold mb-4">
-              <MapPin className="w-4 h-4" />
-              تجدنا هنا
-            </div>
-            <h2 className="text-3xl lg:text-4xl font-black text-foreground mb-3" data-testid="text-location-title">
-              موقعنا
-            </h2>
-            <p className="text-muted-foreground text-lg">
-              موقعنا في الموصل – حي البريد
-            </p>
-          </div>
-
-          <div className="bg-card border border-card-border rounded-3xl overflow-hidden shadow-lg">
-            {/* Header Card */}
-            <div className="bg-gradient-to-l from-amber-500 to-amber-600 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-black text-lg leading-tight">شركة الماس لتأجير السيارات</h3>
-                  <p className="text-amber-100 text-sm mt-0.5">الموصل – حي البريد، محافظة نينوى</p>
-                </div>
-              </div>
-              <a
-                href="https://www.google.com/maps/place/95PH%2BHJW+%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D8%B3+%D9%84%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/@36.3864177,43.177547,15z"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-amber-600 hover:bg-amber-50 font-bold text-sm transition-all duration-200 shadow whitespace-nowrap shrink-0"
-                data-testid="link-open-maps"
-              >
-                <MapPin className="w-4 h-4" />
-                فتح الموقع على Google Maps
-              </a>
-            </div>
-
-            {/* Map Embed */}
-            <div className="w-full h-72 sm:h-96 lg:h-[420px] relative">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6512.29!2d43.1765!3d36.3864202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4007bf005aa99a53%3A0x5ed539e930e15b71!2z2LPYsdmJzZip2Knam2jYuyDYp9mE2YXYs9mE2LQg2YTYqtCj2KzYp9qv2LEg2LnYs9mK2KfYsdi2INin2YTYs9mK2KfYsdi2!5e0!3m2!1sar!2siq!4v1711234567890!5m2!1sar!2siq"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="موقع شركة الماس لتأجير السيارات"
-                data-testid="iframe-google-maps"
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-
-            {/* Info Row */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x-reverse sm:divide-x border-t border-border">
-              <div className="flex items-center gap-3 p-4">
-                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
-                  <MapPin className="w-4 h-4 text-amber-500" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">العنوان</p>
-                  <p className="text-sm font-semibold text-foreground">الموصل – حي البريد</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4">
-                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4 text-amber-500" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">للتواصل</p>
-                  <p className="text-sm font-semibold text-foreground">+964 770 000 0000</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4">
-                <div className="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4 text-amber-500" />
-                </div>
-                <div>
-                  <p className="text-xs text-muted-foreground">ساعات العمل</p>
-                  <p className="text-sm font-semibold text-foreground">24 ساعة / 7 أيام</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-l from-amber-500 to-amber-600" data-testid="section-cta">
+      <section className="py-20 bg-black" data-testid="section-cta">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">
             جاهز لتجربة قيادة استثنائية؟
           </h2>
-          <p className="text-amber-100 mb-8 text-lg">
+          <p className="text-gray-400 mb-8 text-lg">
             احجز سيارتك الآن واستمتع بأفضل العروض والأسعار
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button
-              onClick={() => setBookingOpen(true)}
-              className="px-10 py-4 rounded-2xl bg-white text-amber-600 hover:bg-amber-50 font-black text-base transition-all duration-200 shadow-lg active:scale-95"
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-4 rounded-2xl bg-white text-gray-900 hover:bg-gray-100 font-black text-base transition-all duration-200 shadow-lg active:scale-95"
               data-testid="button-final-cta"
             >
               احجز الآن
-            </button>
+            </a>
             <a
-              href="tel:+966500000000"
-              className="flex items-center gap-2 px-10 py-4 rounded-2xl bg-amber-600 border-2 border-white/30 hover:bg-amber-700 text-white font-bold text-base transition-all"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-10 py-4 rounded-2xl bg-gray-800 border-2 border-gray-600 hover:bg-gray-700 text-white font-bold text-base transition-all"
               data-testid="link-final-call"
             >
               <Phone className="w-5 h-5" />
@@ -445,8 +450,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
     </main>
   );
 }

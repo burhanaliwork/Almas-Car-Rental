@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, Phone } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/9647735256513";
+
 const navLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/sports", label: "الرياضية" },
@@ -40,7 +42,7 @@ export default function Header() {
                 <span
                   className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     location === link.href
-                      ? "bg-amber-50 text-amber-600 shadow-sm"
+                      ? "bg-gray-100 text-gray-900 shadow-sm"
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                   }`}
                 >
@@ -50,11 +52,13 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Phone + Mobile Toggle */}
+          {/* WhatsApp + Mobile Toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+966500000000"
-              className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm transition-all duration-200 shadow-sm hover:shadow-md"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow-sm hover:shadow-md"
               data-testid="link-phone"
             >
               <Phone className="w-4 h-4" />
@@ -82,7 +86,7 @@ export default function Header() {
                 <span
                   className={`block px-4 py-3 rounded-lg text-sm font-semibold transition-all duration-200 cursor-pointer ${
                     location === link.href
-                      ? "bg-amber-50 text-amber-600"
+                      ? "bg-gray-100 text-gray-900"
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary"
                   }`}
                   onClick={() => setMenuOpen(false)}
@@ -92,8 +96,10 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="tel:+966500000000"
-              className="flex items-center justify-center gap-2 mt-2 px-4 py-3 rounded-xl bg-amber-500 text-white font-bold text-sm"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 mt-2 px-4 py-3 rounded-xl bg-black text-white font-bold text-sm"
               data-testid="mobile-link-phone"
             >
               <Phone className="w-4 h-4" />

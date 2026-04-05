@@ -1,4 +1,6 @@
-import { Users, Fuel, Gauge, Star, Calendar } from "lucide-react";
+import { Users, Fuel, Gauge, Star, MessageCircle } from "lucide-react";
+
+const WHATSAPP_URL = "https://wa.me/9647735256513";
 
 interface CarCardProps {
   name: string;
@@ -21,8 +23,14 @@ export default function CarCard({
   speed,
   rating,
   badge,
-  badgeColor = "bg-amber-500",
+  badgeColor = "bg-gray-900",
 }: CarCardProps) {
+  const handleBook = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const msg = encodeURIComponent(`مرحباً، أرغب بحجز سيارة ${name} بسعر ${pricePerDay.toLocaleString("ar-SA")} دينار/يوم.`);
+    window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
+  };
+
   return (
     <div
       className="bg-card border border-card-border rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
@@ -42,7 +50,7 @@ export default function CarCard({
           </span>
         )}
         <div className="absolute bottom-3 left-3 flex items-center gap-1 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg">
-          <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+          <Star className="w-3.5 h-3.5 text-gray-700 fill-gray-700" />
           <span className="text-xs font-bold text-gray-800">{rating}</span>
         </div>
       </div>
@@ -72,16 +80,17 @@ export default function CarCard({
         {/* Price + Book */}
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-2xl font-black text-amber-500" data-testid={`text-price-${name}`}>
+            <p className="text-2xl font-black text-gray-900" data-testid={`text-price-${name}`}>
               {pricePerDay.toLocaleString("ar-SA")}
             </p>
             <p className="text-xs text-muted-foreground">دينار / يوم</p>
           </div>
           <button
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"
+            onClick={handleBook}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"
             data-testid={`button-book-${name}`}
           >
-            <Calendar className="w-4 h-4" />
+            <MessageCircle className="w-4 h-4" />
             احجز الآن
           </button>
         </div>

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { X, Calendar, User, Phone, CheckCircle } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/9647735256513";
+const TODAY = "2026-04-05";
+
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
@@ -20,6 +23,14 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const msg = encodeURIComponent(
+      `مرحباً، أرغب بحجز سيارة${carName ? ` (${carName})` : ""}.\n` +
+      `الاسم: ${form.name}\n` +
+      `رقم الهاتف: ${form.phone}\n` +
+      `تاريخ البداية: ${form.startDate}\n` +
+      `تاريخ النهاية: ${form.endDate}`
+    );
+    window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
     setSubmitted(true);
   };
 
@@ -50,18 +61,18 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
         <div className="p-5">
           {submitted ? (
             <div className="flex flex-col items-center text-center py-8 gap-4" data-testid="booking-success">
-              <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center">
-                <CheckCircle className="w-9 h-9 text-green-500" />
+              <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                <CheckCircle className="w-9 h-9 text-gray-800" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">تم الحجز بنجاح!</h3>
+                <h3 className="text-xl font-bold text-foreground mb-2">تم إرسال طلبك!</h3>
                 <p className="text-sm text-muted-foreground">
-                  سيتواصل معك فريقنا خلال ساعات لتأكيد الحجز
+                  سيتواصل معك فريقنا عبر الواتساب لتأكيد الحجز
                 </p>
               </div>
               <button
                 onClick={handleClose}
-                className="px-6 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold transition-all"
+                className="px-6 py-2.5 rounded-xl bg-black hover:bg-gray-800 text-white font-bold transition-all"
                 data-testid="button-close-success"
               >
                 حسناً
@@ -81,7 +92,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                     placeholder="أدخل اسمك الكامل"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                     data-testid="input-name"
                   />
                 </div>
@@ -96,10 +107,10 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                   <input
                     type="tel"
                     required
-                    placeholder="05XXXXXXXX"
+                    placeholder="07XXXXXXXXX"
                     value={form.phone}
                     onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                     data-testid="input-phone"
                   />
                 </div>
@@ -115,9 +126,10 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                     <input
                       type="date"
                       required
+                      min={TODAY}
                       value={form.startDate}
-                      onChange={(e) => setForm({ ...form, startDate: e.target.value })}
-                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      onChange={(e) => setForm({ ...form, startDate: e.target.value, endDate: "" })}
+                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                       data-testid="input-start-date"
                     />
                   </div>
@@ -131,9 +143,10 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                     <input
                       type="date"
                       required
+                      min={form.startDate || TODAY}
                       value={form.endDate}
                       onChange={(e) => setForm({ ...form, endDate: e.target.value })}
-                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                      className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
                       data-testid="input-end-date"
                     />
                   </div>
@@ -142,10 +155,10 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-base transition-all duration-200 shadow hover:shadow-md mt-2"
+                className="w-full py-3 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-base transition-all duration-200 shadow hover:shadow-md mt-2"
                 data-testid="button-submit-booking"
               >
-                تأكيد الحجز
+                تأكيد الحجز عبر الواتساب
               </button>
             </form>
           )}

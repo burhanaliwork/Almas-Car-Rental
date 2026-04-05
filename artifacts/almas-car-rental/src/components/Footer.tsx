@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Diamond, Phone, MapPin, Mail, Facebook, Twitter, Instagram } from "lucide-react";
+import { Diamond, Phone, MapPin, Mail, Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -9,25 +9,25 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 shadow-md">
-                <Diamond className="w-6 h-6 text-white fill-white" />
+              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-white shadow-md">
+                <Diamond className="w-6 h-6 text-gray-900 fill-gray-900" />
               </div>
               <div className="leading-tight">
                 <p className="text-xl font-black text-white">الماس</p>
-                <p className="text-sm text-amber-400 font-medium">لتأجير السيارات</p>
+                <p className="text-sm text-gray-400 font-medium">لتأجير السيارات</p>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-gray-400 max-w-sm mb-6">
-              نقدم لكم أفضل تجربة لتأجير السيارات في المملكة العربية السعودية. أسطول متنوع من السيارات بأسعار تنافسية وخدمة على مدار الساعة.
+              نقدم لكم أفضل تجربة لتأجير السيارات في الموصل والعراق. أسطول متنوع من السيارات بأسعار تنافسية وخدمة على مدار الساعة.
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-amber-500 transition-colors" data-testid="link-facebook">
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-amber-500 transition-colors" data-testid="link-twitter">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-amber-500 transition-colors" data-testid="link-instagram">
+              <a
+                href="https://www.instagram.com/almas_carrental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-white hover:text-gray-900 transition-colors"
+                data-testid="link-instagram"
+              >
                 <Instagram className="w-4 h-4" />
               </a>
             </div>
@@ -46,7 +46,7 @@ export default function Footer() {
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>
-                    <span className="text-sm text-gray-400 hover:text-amber-400 transition-colors cursor-pointer">
+                    <span className="text-sm text-gray-400 hover:text-white transition-colors cursor-pointer">
                       {link.label}
                     </span>
                   </Link>
@@ -60,18 +60,17 @@ export default function Footer() {
             <h3 className="text-white font-bold text-base mb-5 pb-2 border-b border-gray-700">تواصل معنا</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm text-gray-400">+964 770 000 0000</p>
-                  <p className="text-sm text-gray-400">+964 750 000 0000</p>
+                  <p className="text-sm text-gray-400">+964 773 525 6513</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+                <Mail className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
                 <p className="text-sm text-gray-400">info@almas-rental.iq</p>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-amber-400 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
                 <p className="text-sm text-gray-400">الموصل – حي البريد، محافظة نينوى</p>
               </li>
             </ul>
@@ -83,8 +82,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} الماس لتأجير السيارات. جميع الحقوق محفوظة.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="text-xs text-gray-500 hover:text-amber-400 transition-colors">سياسة الخصوصية</a>
-            <a href="#" className="text-xs text-gray-500 hover:text-amber-400 transition-colors">الشروط والأحكام</a>
+            <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">سياسة الخصوصية</a>
+            <a href="#" className="text-xs text-gray-500 hover:text-white transition-colors">الشروط والأحكام</a>
           </div>
         </div>
       </div>

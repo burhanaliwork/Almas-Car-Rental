@@ -74,8 +74,8 @@ export default function CategoryPage({
             <span className="font-bold text-foreground">{filteredCars.length}</span> سيارة متاحة
           </span>
           <span className="text-sm text-muted-foreground">
-            من <span className="font-bold text-amber-500">{minPrice.toLocaleString("ar-SA")}</span> إلى{" "}
-            <span className="font-bold text-amber-500">{maxPrice.toLocaleString("ar-SA")}</span> دينار/يوم
+            من <span className="font-bold text-gray-900">{minPrice.toLocaleString("ar-SA")}</span> إلى{" "}
+            <span className="font-bold text-gray-900">{maxPrice.toLocaleString("ar-SA")}</span> دينار/يوم
           </span>
           <div className="flex items-center gap-2 mr-auto">
             <SlidersHorizontal className="w-4 h-4 text-muted-foreground" />
@@ -83,7 +83,7 @@ export default function CategoryPage({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-              className="text-sm bg-background border border-input rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-amber-400"
+              className="text-sm bg-background border border-input rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-black"
               data-testid="select-sort"
             >
               <option value="rating">الأعلى تقييماً</option>
