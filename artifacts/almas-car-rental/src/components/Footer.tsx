@@ -42,7 +42,7 @@ export default function Footer() {
                 { href: "/sports", label: "السيارات الرياضية" },
                 { href: "/economy", label: "السيارات الاقتصادية" },
                 { href: "/family", label: "السيارات العائلية" },
-                { href: "/vip", label: "سيارات VIP" },
+                { href: "/luxury", label: "السيارات الفاخرة" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href}>

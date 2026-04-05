@@ -146,16 +146,34 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                   موقع الاستخدام
                 </label>
                 <div className="relative">
-                  <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                  <input
-                    type="text"
+                  <MapPin className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
+                  <select
                     required
-                    placeholder="أدخل موقع أو منطقة الاستخدام"
                     value={form.location}
                     onChange={(e) => setForm({ ...form, location: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
-                    data-testid="input-location"
-                  />
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black appearance-none"
+                    data-testid="select-location"
+                  >
+                    <option value="">اختر المحافظة</option>
+                    <option value="بغداد">بغداد</option>
+                    <option value="البصرة">البصرة</option>
+                    <option value="نينوى (الموصل)">نينوى (الموصل)</option>
+                    <option value="أربيل">أربيل</option>
+                    <option value="السليمانية">السليمانية</option>
+                    <option value="دهوك">دهوك</option>
+                    <option value="كركوك">كركوك</option>
+                    <option value="الأنبار">الأنبار</option>
+                    <option value="ديالى">ديالى</option>
+                    <option value="صلاح الدين">صلاح الدين</option>
+                    <option value="بابل">بابل</option>
+                    <option value="كربلاء">كربلاء</option>
+                    <option value="النجف">النجف</option>
+                    <option value="القادسية">القادسية</option>
+                    <option value="المثنى">المثنى</option>
+                    <option value="ذي قار">ذي قار</option>
+                    <option value="ميسان">ميسان</option>
+                    <option value="واسط">واسط</option>
+                  </select>
                 </div>
               </div>
 

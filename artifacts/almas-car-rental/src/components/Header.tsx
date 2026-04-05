@@ -7,9 +7,9 @@ const WHATSAPP_URL = "https://wa.me/9647735256513";
 const navLinks = [
   { href: "/", label: "الرئيسية" },
   { href: "/sports", label: "الرياضية" },
-  { href: "/economy", label: "الاقتصادية" },
+  { href: "/economy", label: "السيدات الاقتصادية" },
   { href: "/family", label: "العائلية" },
-  { href: "/vip", label: "VIP" },
+  { href: "/luxury", label: "الفاخرة" },
 ];
 
 export default function Header() {

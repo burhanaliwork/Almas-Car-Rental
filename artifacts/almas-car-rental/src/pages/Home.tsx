@@ -33,36 +33,36 @@ const features = [
 const categories = [
   {
     href: "/sports",
-    label: "الرياضية",
+    label: "السيارات الرياضية",
     icon: Zap,
-    desc: "أداء استثنائي وسرعات خيالية",
+    desc: "أداء استثنائي وسرعات خيالية لعشاق القيادة",
     image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-700",
     startPrice: 100000,
   },
   {
     href: "/economy",
-    label: "الاقتصادية",
+    label: "السيدات الاقتصادية",
     icon: Car,
-    desc: "اقتصادية وموثوقة لرحلاتك اليومية",
+    desc: "سيارات أنيقة واقتصادية مريحة لجميع المناسبات",
     image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-800 to-gray-600",
     startPrice: 30000,
   },
   {
     href: "/family",
-    label: "العائلية",
+    label: "السيارات العائلية",
     icon: Users,
-    desc: "واسعة ومريحة لكل العائلة",
+    desc: "واسعة ومريحة تسع لكل العائلة",
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-700",
     startPrice: 90000,
   },
   {
-    href: "/vip",
-    label: "VIP",
+    href: "/luxury",
+    label: "السيارات الفاخرة",
     icon: Gem,
-    desc: "الفخامة والرقي لكبار الشخصيات",
+    desc: "الفخامة والرقي لأعلى مستويات الراحة والتميز",
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-600",
     startPrice: 250000,
@@ -129,7 +129,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed" data-testid="text-hero-desc">
-              أسطول ضخم من السيارات الرياضية والاقتصادية والعائلية وVIP. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
+              أسطول ضخم من السيارات الرياضية والسيدات الاقتصادية والعائلية والفاخرة. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
             </p>
             <div className="flex flex-wrap gap-4">
               <a

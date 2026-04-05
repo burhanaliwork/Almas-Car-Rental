@@ -1,7 +1,7 @@
 export interface Car {
   id: number;
   name: string;
-  category: "sports" | "economy" | "family" | "vip";
+  category: "sports" | "economy" | "family" | "luxury";
   image: string;
   pricePerDay: number;
   seats: number;
@@ -42,7 +42,7 @@ export const cars: Car[] = [
     speed: "240 كم/س",
     rating: 4.8,
     badge: "الأشهر",
-    badgeColor: "bg-amber-500",
+    badgeColor: "bg-gray-700",
     features: ["محرك V8 5.0L Coyote", "450 حصان", "نظام مساعدة المسار", "عجلة تحكم رياضية"],
   },
   {
@@ -68,7 +68,7 @@ export const cars: Car[] = [
     speed: "255 كم/س",
     rating: 4.7,
     badge: "حصري",
-    badgeColor: "bg-yellow-500",
+    badgeColor: "bg-yellow-600",
     features: ["محرك V8 6.2L", "455 حصان", "وضع Sport مخصص", "شاشة معلومات HUD"],
   },
   {
@@ -110,7 +110,7 @@ export const cars: Car[] = [
     speed: "200 كم/س",
     rating: 4.6,
     badge: "الأوفر",
-    badgeColor: "bg-green-500",
+    badgeColor: "bg-green-600",
     features: ["اقتصاد ممتاز في الوقود", "مقاعد مريحة", "بلوتوث", "كاميرا خلفية"],
   },
   {
@@ -160,7 +160,7 @@ export const cars: Car[] = [
     speed: "205 كم/س",
     rating: 4.5,
     badge: "شعبي",
-    badgeColor: "bg-blue-500",
+    badgeColor: "bg-blue-600",
     features: ["Honda Sensing", "شاشة 9 بوصة", "مقاعد قابلة للتسخين", "عجلة تحكم متعددة"],
   },
   {
@@ -188,7 +188,7 @@ export const cars: Car[] = [
     speed: "210 كم/س",
     rating: 4.9,
     badge: "الأفضل",
-    badgeColor: "bg-amber-500",
+    badgeColor: "bg-gray-700",
     features: ["3 صفوف مقاعد", "نظام 4WD", "تعليق هوائي", "شاشات خلفية للترفيه"],
   },
   {
@@ -238,7 +238,7 @@ export const cars: Car[] = [
     speed: "180 كم/س",
     rating: 4.4,
     badge: "الأوسع",
-    badgeColor: "bg-teal-500",
+    badgeColor: "bg-teal-600",
     features: ["11 مقعد", "باب انزلاقي تلقائي", "نوافذ بانورامية", "هواء مكيف منفصل"],
   },
   {
@@ -254,11 +254,11 @@ export const cars: Car[] = [
     features: ["8 مقاعد جلدية", "نظام صوت Harman Kardon", "تحكم 4 مناطق", "كاميرا 360°"],
   },
 
-  // VIP
+  // Luxury
   {
     id: 19,
     name: "رولز رويس فانتوم",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 1200000,
     seats: 5,
@@ -266,28 +266,28 @@ export const cars: Car[] = [
     speed: "250 كم/س",
     rating: 5.0,
     badge: "الملكي",
-    badgeColor: "bg-purple-600",
+    badgeColor: "bg-gray-900",
     description: "قمة الترف والأناقة - تجربة لا مثيل لها",
     features: ["نجوم السقف الداخلية", "ثلاجة مدمجة", "مقاعد تدليك", "سجادة يدوية"],
   },
   {
     id: 20,
     name: "مرسيدس مايباخ S600",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 800000,
     seats: 4,
     fuelType: "بنزين",
     speed: "250 كم/س",
     rating: 4.9,
-    badge: "VIP",
-    badgeColor: "bg-amber-600",
+    badge: "فاخر",
+    badgeColor: "bg-gray-800",
     features: ["مقاعد ممتدة خلفية", "شاشات ترفيهية", "زجاج عازل للصوت", "إضاءة محيطية 64 لون"],
   },
   {
     id: 21,
     name: "بنتلي فلايينج سبر",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1625231337371-7efab52c5b08?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 900000,
     seats: 5,
@@ -299,7 +299,7 @@ export const cars: Car[] = [
   {
     id: 22,
     name: "BMW الفئة السابعة",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 250000,
     seats: 5,
@@ -311,7 +311,7 @@ export const cars: Car[] = [
   {
     id: 23,
     name: "مرسيدس S500",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 300000,
     seats: 5,
@@ -319,13 +319,13 @@ export const cars: Car[] = [
     speed: "250 كم/س",
     rating: 4.9,
     badge: "الأكثر طلباً",
-    badgeColor: "bg-amber-500",
+    badgeColor: "bg-gray-700",
     features: ["نظام AIRMATIC", "شاشة 12.8 بوصة OLED", "مقاعد تدليك 4D", "رؤية ليلية"],
   },
   {
     id: 24,
     name: "رنج روفر أوتوبيوغرافي",
-    category: "vip",
+    category: "luxury",
     image: "https://images.unsplash.com/photo-1519245624775-f11ecfab93bf?w=800&auto=format&fit=crop&q=80",
     pricePerDay: 450000,
     seats: 5,
@@ -338,10 +338,10 @@ export const cars: Car[] = [
 
 export const getCategoryLabel = (category: Car["category"]) => {
   const labels = {
-    sports: "رياضية",
-    economy: "اقتصادية",
-    family: "عائلية",
-    vip: "VIP",
+    sports: "الرياضية",
+    economy: "السيدات الاقتصادية",
+    family: "العائلية",
+    luxury: "الفاخرة",
   };
   return labels[category];
 };
