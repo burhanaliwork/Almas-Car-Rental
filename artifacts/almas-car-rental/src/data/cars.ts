@@ -339,7 +339,7 @@ export const cars: Car[] = [
 export const getCategoryLabel = (category: Car["category"]) => {
   const labels = {
     sports: "الرياضية",
-    economy: "السيدات الاقتصادية",
+    economy: "السيارات الاقتصادية",
     family: "العائلية",
     luxury: "الفاخرة",
   };

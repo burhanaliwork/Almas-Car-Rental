@@ -42,7 +42,7 @@ const categories = [
   },
   {
     href: "/economy",
-    label: "السيدات الاقتصادية",
+    label: "السيارات الاقتصادية",
     icon: Car,
     desc: "سيارات أنيقة واقتصادية مريحة لجميع المناسبات",
     image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&auto=format&fit=crop&q=80",
@@ -129,7 +129,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-lg text-gray-300 mb-10 max-w-xl leading-relaxed" data-testid="text-hero-desc">
-              أسطول ضخم من السيارات الرياضية والسيدات الاقتصادية والعائلية والفاخرة. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
+              أسطول ضخم من السيارات الرياضية والسيارات الاقتصادية والعائلية والفاخرة. احجز الآن واستمتع بأفضل تجربة قيادة في الموصل والعراق.
             </p>
             <div className="flex flex-wrap gap-4">
               <button
