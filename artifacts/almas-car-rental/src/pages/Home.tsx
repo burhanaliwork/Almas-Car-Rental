@@ -196,7 +196,7 @@ export default function Home() {
                 </div>
               </div>
               <a
-                href="https://www.google.com/maps/place/95PH%2BHJW+%D8%B4%D8%B1%D9%83%D8%A9+%D8%A7%D9%84%D9%85%D8%A7%D8%B3+%D9%84%D8%AA%D8%A3%D8%AC%D9%8A%D8%B1+%D8%A7%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/@36.3864177,43.177547,15z"
+                href="https://maps.app.goo.gl/9aXKZrDGue3gdo4eA?g_st=ic"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-gray-900 hover:bg-gray-100 font-bold text-sm transition-all duration-200 shadow whitespace-nowrap shrink-0"
