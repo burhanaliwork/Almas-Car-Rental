@@ -107,9 +107,9 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="section-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black z-0" />
         <div
-          className="absolute inset-0 opacity-20 z-0"
+          className="absolute inset-0 opacity-50 z-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&auto=format&fit=crop&q=80')`,
+            backgroundImage: `url('/hero-fleet.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -180,7 +180,7 @@ export default function Home() {
               موقعنا
             </h2>
             <p className="text-muted-foreground text-lg">
-              موقعنا في الموصل – حي البريد
+              موقعنا في الموصل - حي البريد - قرب ترافيك لايت المصارف
             </p>
           </div>
 
@@ -192,7 +192,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="text-white font-black text-lg leading-tight">شركة الماس لتأجير السيارات</h3>
-                  <p className="text-gray-300 text-sm mt-0.5">الموصل – حي البريد، محافظة نينوى</p>
+                  <p className="text-gray-300 text-sm mt-0.5">الموصل - حي البريد - مجاور خدمات كي كارد</p>
                 </div>
               </div>
               <a
@@ -214,7 +214,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">العنوان</p>
-                  <p className="text-sm font-semibold text-foreground">الموصل – حي البريد</p>
+                  <p className="text-sm font-semibold text-foreground">الموصل - حي البريد - قرب ترافيك لايت المصارف، مجاور خدمات كي كارد</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4">
