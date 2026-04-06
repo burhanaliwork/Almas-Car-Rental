@@ -41,9 +41,6 @@ export default function CategoryPage({
     setBookingOpen(true);
   };
 
-  const minPrice = Math.min(...filteredCars.map((c) => c.pricePerDay));
-  const maxPrice = Math.max(...filteredCars.map((c) => c.pricePerDay));
-
   return (
     <main dir="rtl">
       {/* Hero */}
@@ -73,10 +70,6 @@ export default function CategoryPage({
           <span className="text-sm text-muted-foreground">
             <span className="font-bold text-foreground">{filteredCars.length}</span> سيارة متاحة
           </span>
-          <span className="text-sm text-muted-foreground">
-            من <span className="font-bold text-gray-900">{minPrice.toLocaleString("ar-SA")}</span> إلى{" "}
-            <span className="font-bold text-gray-900">{maxPrice.toLocaleString("ar-SA")}</span> دينار/يوم
-          </span>
           <div className="flex items-center gap-2 mr-auto">
             <SlidersHorizontal className="w-4 h-4 text-muted-foreground" />
             <span className="text-sm font-medium text-muted-foreground">ترتيب:</span>
@@ -87,8 +80,6 @@ export default function CategoryPage({
               data-testid="select-sort"
             >
               <option value="rating">الأعلى تقييماً</option>
-              <option value="price-asc">السعر: الأقل أولاً</option>
-              <option value="price-desc">السعر: الأعلى أولاً</option>
             </select>
           </div>
         </div>

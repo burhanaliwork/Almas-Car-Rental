@@ -1,4 +1,4 @@
-import { Users, Fuel, Gauge, Star, Calendar } from "lucide-react";
+import { Users, Fuel, Star, Calendar } from "lucide-react";
 
 interface CarCardProps {
   name: string;
@@ -16,10 +16,8 @@ interface CarCardProps {
 export default function CarCard({
   name,
   image,
-  pricePerDay,
   seats,
   fuelType,
-  speed,
   rating,
   badge,
   badgeColor = "bg-gray-900",
@@ -56,7 +54,7 @@ export default function CarCard({
         </h3>
 
         {/* Specs */}
-        <div className="grid grid-cols-3 gap-3 mb-5">
+        <div className="grid grid-cols-2 gap-3 mb-5">
           <div className="flex flex-col items-center gap-1 p-2 rounded-xl bg-muted/60">
             <Users className="w-4 h-4 text-muted-foreground" />
             <span className="text-xs text-muted-foreground">{seats} مقاعد</span>
@@ -65,32 +63,20 @@ export default function CarCard({
             <Fuel className="w-4 h-4 text-muted-foreground" />
             <span className="text-xs text-muted-foreground">{fuelType}</span>
           </div>
-          <div className="flex flex-col items-center gap-1 p-2 rounded-xl bg-muted/60">
-            <Gauge className="w-4 h-4 text-muted-foreground" />
-            <span className="text-xs text-muted-foreground">{speed}</span>
-          </div>
         </div>
 
-        {/* Price + Book */}
-        <div className="flex items-center justify-between">
-          <div>
-            <p className="text-2xl font-black text-gray-900" data-testid={`text-price-${name}`}>
-              {pricePerDay.toLocaleString("ar-SA")}
-            </p>
-            <p className="text-xs text-muted-foreground">دينار / يوم</p>
-          </div>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              onBook?.();
-            }}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"
-            data-testid={`button-book-${name}`}
-          >
-            <Calendar className="w-4 h-4" />
-            احجز الآن
-          </button>
-        </div>
+        {/* Book Button */}
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            onBook?.();
+          }}
+          className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md active:scale-95"
+          data-testid={`button-book-${name}`}
+        >
+          <Calendar className="w-4 h-4" />
+          احجز الآن
+        </button>
       </div>
     </div>
   );

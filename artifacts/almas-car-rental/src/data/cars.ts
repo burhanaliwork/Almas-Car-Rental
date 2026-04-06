@@ -101,7 +101,7 @@ export const cars: Car[] = [
   // Economy
   {
     id: 7,
-    name: "كيا سيراتو 2021",
+    name: "Kia Forte 2023",
     category: "economy",
     image: "/car-cerato.png",
     pricePerDay: 35000,
@@ -115,7 +115,7 @@ export const cars: Car[] = [
   },
   {
     id: 8,
-    name: "هيونداي إيلانترا 2024",
+    name: "Hyundai Elantra 2025",
     category: "economy",
     image: "/car-elantra.jpeg",
     pricePerDay: 40000,
@@ -129,7 +129,7 @@ export const cars: Car[] = [
   },
   {
     id: 9,
-    name: "BYD كين بلس DM-i",
+    name: "BYD Qin Plus 2025",
     category: "economy",
     image: "/car-byd-qin.jpg",
     pricePerDay: 38000,
@@ -143,7 +143,7 @@ export const cars: Car[] = [
   },
   {
     id: 10,
-    name: "هيونداي أكسنت 2024",
+    name: "Hyundai Accent 2024",
     category: "economy",
     image: "/car-accent.png",
     pricePerDay: 32000,
@@ -155,7 +155,7 @@ export const cars: Car[] = [
   },
   {
     id: 11,
-    name: "نيسان صني 2025",
+    name: "Nissan Sunny 2025",
     category: "economy",
     image: "/car-sunny.jpeg",
     pricePerDay: 28000,
@@ -167,7 +167,7 @@ export const cars: Car[] = [
   },
   {
     id: 12,
-    name: "كيا ريو 2023",
+    name: "Kia Rio 2023",
     category: "economy",
     image: "/car-rio.png",
     pricePerDay: 30000,
