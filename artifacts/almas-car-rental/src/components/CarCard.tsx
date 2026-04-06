@@ -3,7 +3,6 @@ import { Users, Fuel, Star, Calendar } from "lucide-react";
 interface CarCardProps {
   name: string;
   image: string;
-  pricePerDay: number;
   seats: number;
   fuelType: string;
   speed: string;

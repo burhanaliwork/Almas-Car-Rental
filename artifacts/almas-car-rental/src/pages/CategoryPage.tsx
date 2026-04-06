@@ -26,13 +26,11 @@ export default function CategoryPage({
 }: CategoryPageProps) {
   const [bookingOpen, setBookingOpen] = useState(false);
   const [selectedCar, setSelectedCar] = useState<string | undefined>();
-  const [sortBy, setSortBy] = useState<"price-asc" | "price-desc" | "rating">("rating");
+  const [sortBy, setSortBy] = useState<"rating">("rating");
 
   const filteredCars = cars
     .filter((c) => c.category === category)
     .sort((a, b) => {
-      if (sortBy === "price-asc") return a.pricePerDay - b.pricePerDay;
-      if (sortBy === "price-desc") return b.pricePerDay - a.pricePerDay;
       return b.rating - a.rating;
     });
 
@@ -94,7 +92,6 @@ export default function CategoryPage({
                 key={car.id}
                 name={car.name}
                 image={car.image}
-                pricePerDay={car.pricePerDay}
                 seats={car.seats}
                 fuelType={car.fuelType}
                 speed={car.speed}

@@ -17,9 +17,14 @@ export default function Footer() {
                 <p className="text-sm text-gray-400 font-medium">لتأجير السيارات</p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400 max-w-sm mb-6">
-              نقدم لكم أفضل تجربة لتأجير السيارات في الموصل والعراق. أسطول متنوع من السيارات بأسعار تنافسية وخدمة على مدار الساعة.
+            <p className="text-sm leading-relaxed text-gray-400 max-w-sm mb-3">
+              نقدم لكم أفضل تجربة لتأجير السيارات في الموصل والعراق. أسطول متنوع من السيارات بأسعار تنافسية.
             </p>
+            <div className="text-sm text-gray-400 mb-6">
+              <p className="font-semibold text-gray-300 mb-1">ساعات العمل:</p>
+              <p>السبت - الخميس: 9:00 ص - 11:00 م</p>
+              <p>الجمعة: 10:00 ص - 10:00 م</p>
+            </div>
             <div className="flex items-center gap-3">
               <a
                 href="https://www.instagram.com/almas_carrental"

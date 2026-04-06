@@ -12,8 +12,8 @@ const features = [
   },
   {
     icon: Clock,
-    title: "خدمة 24/7",
-    desc: "متاحون على مدار الساعة لخدمتك في أي وقت",
+    title: "ساعات عمل مريحة",
+    desc: "السبت - الخميس: 9ص - 11م | الجمعة: 10ص - 10م",
     color: "bg-gray-100 text-gray-700",
   },
   {
@@ -38,7 +38,6 @@ const categories = [
     desc: "أداء استثنائي وسرعات خيالية لعشاق القيادة",
     image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-700",
-    startPrice: 100000,
   },
   {
     href: "/economy",
@@ -47,7 +46,6 @@ const categories = [
     desc: "سيارات أنيقة واقتصادية مريحة لجميع المناسبات",
     image: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-800 to-gray-600",
-    startPrice: 30000,
   },
   {
     href: "/family",
@@ -56,7 +54,6 @@ const categories = [
     desc: "واسعة ومريحة تسع لكل العائلة",
     image: "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-700",
-    startPrice: 90000,
   },
   {
     href: "/luxury",
@@ -65,7 +62,6 @@ const categories = [
     desc: "الفخامة والرقي لأعلى مستويات الراحة والتميز",
     image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&auto=format&fit=crop&q=80",
     gradient: "from-gray-900 to-gray-600",
-    startPrice: 250000,
   },
 ];
 
@@ -232,7 +228,8 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">ساعات العمل</p>
-                  <p className="text-sm font-semibold text-foreground">24 ساعة / 7 أيام</p>
+                  <p className="text-sm font-semibold text-foreground">السبت - الخميس: 9ص - 11م</p>
+                  <p className="text-sm font-semibold text-foreground">الجمعة: 10ص - 10م</p>
                 </div>
               </div>
             </div>
@@ -268,14 +265,8 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-4 bg-card">
-                    <p className="text-sm text-muted-foreground mb-2">{cat.desc}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-muted-foreground">يبدأ من</span>
-                      <span className="font-black text-gray-900 text-base">
-                        {cat.startPrice.toLocaleString("ar-SA")} دينار/يوم
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1 mt-3 text-gray-800 font-bold text-sm group-hover:gap-2 transition-all">
+                    <p className="text-sm text-muted-foreground mb-3">{cat.desc}</p>
+                    <div className="flex items-center gap-1 mt-1 text-gray-800 font-bold text-sm group-hover:gap-2 transition-all">
                       <span>استعرض السيارات</span>
                       <ChevronLeft className="w-4 h-4" />
                     </div>
@@ -412,7 +403,7 @@ export default function Home() {
             {[
               "أسعار تنافسية",
               "توصيل مجاني",
-              "خدمة 24/7",
+              "ساعات عمل مريحة",
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-white font-semibold text-sm">
                 <CheckCircle className="w-4 h-4" />
