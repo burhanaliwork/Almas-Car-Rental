@@ -198,10 +198,10 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-base transition-all duration-200 shadow hover:shadow-md mt-2"
+                className="w-full py-3 rounded-xl bg-black hover:bg-gray-800 text-white font-bold text-sm transition-all duration-200 shadow hover:shadow-md mt-2"
                 data-testid="button-submit-booking"
               >
-                إتمام الحجز
+                تأكيد الحجز ومعرفة الأسعار عبر واتساب
               </button>
             </form>
           )}

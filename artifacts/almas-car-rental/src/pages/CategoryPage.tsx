@@ -98,6 +98,7 @@ export default function CategoryPage({
                 rating={car.rating}
                 badge={car.badge}
                 badgeColor={car.badgeColor}
+                colors={car.colors}
                 onBook={() => handleBook(car.name)}
               />
             ))}

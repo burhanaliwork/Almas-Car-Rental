@@ -11,6 +11,7 @@ export interface Car {
   badgeColor?: string;
   description?: string;
   features?: string[];
+  colors?: string[];
 }
 
 export const cars: Car[] = [
@@ -50,6 +51,7 @@ export const cars: Car[] = [
     rating: 4.9,
     badge: "الأكثر طلباً",
     badgeColor: "bg-red-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["محرك V8 6.4L", "485 حصان", "فرامل Brembo", "مقاعد رياضية جلدية"],
   },
   {
@@ -72,6 +74,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "250 كم/س",
     rating: 4.9,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["محرك V8 HEMI", "أداء استثنائي", "4 أبواب", "دفع خلفي"],
   },
   {
@@ -124,6 +127,7 @@ export const cars: Car[] = [
     rating: 4.5,
     badge: "الأوفر",
     badgeColor: "bg-green-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["Apple CarPlay & Android Auto", "مقاعد قماشية مريحة", "تحكم مناخي تلقائي", "إضاءة LED أمامية"],
   },
   {
@@ -137,6 +141,7 @@ export const cars: Car[] = [
     rating: 4.7,
     badge: "الأحدث",
     badgeColor: "bg-blue-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["شاشة لمس 10.25 بوصة", "نظام تنبيه المسار", "مثبت سرعة تكيفي", "كاميرا خلفية HD"],
   },
   {
@@ -150,6 +155,7 @@ export const cars: Car[] = [
     rating: 4.6,
     badge: "هجين",
     badgeColor: "bg-teal-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["محرك هجين موفر للوقود", "شاشة لمس ذكية", "شحن سريع", "قيادة هادئة"],
   },
   {
@@ -161,6 +167,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "185 كم/س",
     rating: 4.4,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم رياضي أنيق", "بلوتوث ومنفذ USB", "كاميرا خلفية", "مثبت سرعة"],
   },
   {
@@ -172,6 +179,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "180 كم/س",
     rating: 4.3,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["اقتصادية في الوقود", "سهلة القيادة", "صيانة منخفضة التكلفة", "مريحة للرحلات اليومية"],
   },
   {
@@ -183,6 +191,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "182 كم/س",
     rating: 4.4,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["Apple CarPlay", "كاميرا خلفية", "مقاعد مريحة", "إضاءة LED"],
   },
   {
@@ -220,6 +229,7 @@ export const cars: Car[] = [
     rating: 4.5,
     badge: "جديد",
     badgeColor: "bg-gray-800",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم عصري أنيق", "شاشة لمس 10.1 بوصة", "Apple CarPlay & Android Auto", "نظام أمان متكامل"],
   },
 
@@ -233,6 +243,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "200 كم/س",
     rating: 4.6,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["دفع رباعي", "مقاعد جلدية", "شاشة 8.4 بوصة", "كاميرا خلفية"],
   },
   {
@@ -246,6 +257,7 @@ export const cars: Car[] = [
     rating: 4.8,
     badge: "الأحدث",
     badgeColor: "bg-blue-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم عصري 2025", "شاشة بانورامية", "نظام أمان متقدم", "كاميرا 360°"],
   },
   {
@@ -257,6 +269,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "185 كم/س",
     rating: 4.7,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["شاشة مزدوجة منحنية", "Apple CarPlay", "فتحة سقف بانورامية", "مقاعد مريحة"],
   },
   {
@@ -270,6 +283,7 @@ export const cars: Car[] = [
     rating: 4.8,
     badge: "7 مقاعد",
     badgeColor: "bg-gray-800",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["7 مقاعد", "Harman Kardon صوت", "كاميرا 360°", "تحكم مناخي ثلاثي المناطق"],
   },
   {
@@ -281,6 +295,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "190 كم/س",
     rating: 4.6,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم رياضي أنيق", "شاشة لمس 10.25 بوصة", "مثبت سرعة تكيفي", "بلوتوث"],
   },
   {
@@ -294,6 +309,7 @@ export const cars: Car[] = [
     rating: 4.7,
     badge: "هجين",
     badgeColor: "bg-teal-600",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["محرك هجين توفير الوقود", "Toyota Safety Sense", "شاشة 10.5 بوصة", "كاميرا خلفية"],
   },
   {
@@ -305,6 +321,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "185 كم/س",
     rating: 4.5,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم جريء", "شاشة 10.25 بوصة", "Apple CarPlay & Android Auto", "كاميرا خلفية"],
   },
 
@@ -320,6 +337,7 @@ export const cars: Car[] = [
     rating: 4.9,
     badge: "الأفضل",
     badgeColor: "bg-gray-900",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["7 مقاعد فاخرة", "شاشة 15 بوصة", "نظام صوت Bose", "تحكم مناخي رباعي المناطق"],
   },
   {
@@ -333,6 +351,7 @@ export const cars: Car[] = [
     rating: 5.0,
     badge: "الأقوى",
     badgeColor: "bg-gray-800",
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["محرك V6 Twin-Turbo", "نظام 4WD متقدم", "مقاعد جلدية فاخرة", "شاشة 12.3 بوصة"],
   },
   {
@@ -344,6 +363,7 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "205 كم/س",
     rating: 4.8,
+    colors: ["#ffffff", "#1a1a1a"],
     features: ["8 مقاعد فاخرة", "شاشات ترفيهية خلفية", "نظام تحكم هوائي", "كاميرا 360°"],
   },
   {

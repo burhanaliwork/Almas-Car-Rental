@@ -1,4 +1,4 @@
-import { Users, Fuel, Star, Calendar } from "lucide-react";
+import { Users, Fuel, Star, Calendar, Check } from "lucide-react";
 
 interface CarCardProps {
   name: string;
@@ -9,8 +9,14 @@ interface CarCardProps {
   rating: number;
   badge?: string;
   badgeColor?: string;
+  colors?: string[];
   onBook?: () => void;
 }
+
+const colorLabels: Record<string, string> = {
+  "#ffffff": "أبيض",
+  "#1a1a1a": "أسود",
+};
 
 export default function CarCard({
   name,
@@ -20,6 +26,7 @@ export default function CarCard({
   rating,
   badge,
   badgeColor = "bg-gray-900",
+  colors,
   onBook,
 }: CarCardProps) {
   return (
@@ -53,7 +60,7 @@ export default function CarCard({
         </h3>
 
         {/* Specs */}
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <div className="grid grid-cols-2 gap-3 mb-4">
           <div className="flex flex-col items-center gap-1 p-2 rounded-xl bg-muted/60">
             <Users className="w-4 h-4 text-muted-foreground" />
             <span className="text-xs text-muted-foreground">{seats} مقاعد</span>
@@ -63,6 +70,29 @@ export default function CarCard({
             <span className="text-xs text-muted-foreground">{fuelType}</span>
           </div>
         </div>
+
+        {/* Colors */}
+        {colors && colors.length > 0 && (
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-xs text-muted-foreground font-medium">الألوان المتوفرة:</span>
+            <div className="flex items-center gap-1.5">
+              {colors.map((color) => (
+                <div
+                  key={color}
+                  className="relative group/color"
+                  title={colorLabels[color] || color}
+                >
+                  <div
+                    className="w-5 h-5 rounded-full border-2 border-gray-300 shadow-sm flex items-center justify-center"
+                    style={{ backgroundColor: color }}
+                  >
+                    <Check className="w-2.5 h-2.5 text-green-500 opacity-0 group-hover/color:opacity-100 transition-opacity" style={{ color: color === "#ffffff" ? "#16a34a" : "#86efac" }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Book Button */}
         <button
