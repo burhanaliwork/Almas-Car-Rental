@@ -67,25 +67,25 @@ const categories = [
 
 const testimonials = [
   {
-    name: "محمد الغامدي",
-    role: "رجل أعمال",
+    name: "محمد علي",
+    role: "",
     text: "خدمة ممتازة وسيارات نظيفة ومريحة. أنصح الجميع بالتعامل مع الماس.",
     rating: 5,
     avatar: "م",
   },
   {
-    name: "سارة العتيبي",
-    role: "مسافرة دائمة",
+    name: "حمزه ليث",
+    role: "",
     text: "أحسن شركة تأجير تعاملت معها. التوصيل للمطار في الوقت المحدد وبدون تأخير.",
     rating: 5,
-    avatar: "س",
+    avatar: "ح",
   },
   {
-    name: "أحمد الشهري",
-    role: "مهندس",
+    name: "جود الطائي",
+    role: "",
     text: "أسعارهم معقولة جداً وخيارات السيارات متنوعة. سأستمر بالتعامل معهم.",
     rating: 4,
-    avatar: "أ",
+    avatar: "ج",
   },
 ];
 
@@ -370,7 +370,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-white font-bold text-sm">{t.name}</p>
-                    <p className="text-gray-400 text-xs">{t.role}</p>
+                    {t.role && <p className="text-gray-400 text-xs">{t.role}</p>}
                   </div>
                 </div>
               </div>

@@ -7,7 +7,7 @@ export default function LuxuryCars() {
       category="luxury"
       title="الفاخرة"
       subtitle="السيارات الفاخرة لأرقى التجارب وأعلى مستويات الراحة"
-      heroImage="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=1200&auto=format&fit=crop&q=80"
+      heroImage="/hero-luxury.jpg"
       accentColor="text-gray-700"
       gradientFrom="from-gray-900/70"
       gradientTo="to-gray-800/90"
