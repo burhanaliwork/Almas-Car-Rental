@@ -60,7 +60,7 @@ const categories = [
     label: "السيارات الفاخرة",
     icon: Gem,
     desc: "الفخامة والرقي لأعلى مستويات الراحة والتميز",
-    image: "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&auto=format&fit=crop&q=80",
+    image: "/hero-luxury.jpg",
     gradient: "from-gray-900 to-gray-600",
   },
 ];
