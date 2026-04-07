@@ -93,7 +93,7 @@ const stats = [
   { value: "+5000", label: "عميل سعيد" },
   { value: "+99", label: "سيارة متاحة" },
   { value: "+3", label: "سنوات خبرة" },
-  { value: "4.9", label: "تقييم العملاء" },
+  { value: "5.0", label: "تقييم على جوجل ماب" },
 ];
 
 export default function Home() {

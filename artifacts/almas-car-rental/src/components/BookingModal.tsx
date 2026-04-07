@@ -26,12 +26,12 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
     e.preventDefault();
     const msg = encodeURIComponent(
       `مرحباً، أرغب بحجز سيارة.\n` +
-      `🚗 السيارة: ${carName || "غير محدد"}\n` +
-      `👤 اسم الزبون: ${form.name}\n` +
-      `📅 تاريخ البداية: ${form.startDate}\n` +
-      `📅 تاريخ الانتهاء: ${form.endDate}\n` +
-      `📍 موقع الاستخدام: ${form.location}\n` +
-      `📋 الغرض من الاستخدام: ${form.purpose}`
+      `السيارة: ${carName || "غير محدد"}\n` +
+      `اسم الزبون: ${form.name}\n` +
+      `تاريخ البداية: ${form.startDate}\n` +
+      `تاريخ الانتهاء: ${form.endDate}\n` +
+      `موقع الاستخدام: ${form.location}\n` +
+      `الغرض من الاستخدام: ${form.purpose}`
     );
     window.open(`${WHATSAPP_URL}?text=${msg}`, "_blank");
     setSubmitted(true);
@@ -183,23 +183,16 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
                   الغرض من الاستخدام
                 </label>
                 <div className="relative">
-                  <FileText className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
-                  <select
+                  <FileText className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                  <input
+                    type="text"
                     required
+                    placeholder="اكتب غرض استخدام السيارة..."
                     value={form.purpose}
                     onChange={(e) => setForm({ ...form, purpose: e.target.value })}
-                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black appearance-none"
-                    data-testid="select-purpose"
-                  >
-                    <option value="">اختر الغرض من الاستخدام</option>
-                    <option value="سفر داخلي">سفر داخلي</option>
-                    <option value="سفر خارجي">سفر خارجي</option>
-                    <option value="عمل ومهام رسمية">عمل ومهام رسمية</option>
-                    <option value="مناسبة عائلية">مناسبة عائلية</option>
-                    <option value="زيارة طبية">زيارة طبية</option>
-                    <option value="سياحة وترفيه">سياحة وترفيه</option>
-                    <option value="أخرى">أخرى</option>
-                  </select>
+                    className="w-full bg-background border border-input rounded-xl pr-9 pl-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-black"
+                    data-testid="input-purpose"
+                  />
                 </div>
               </div>
 
