@@ -368,7 +368,7 @@ export const cars: Car[] = [
     id: 22,
     name: "Land Rover SVR 2022",
     category: "luxury",
-    image: "/car-rangerover.jpg",
+    image: "/car-rangerover-new.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "280 كم/س",

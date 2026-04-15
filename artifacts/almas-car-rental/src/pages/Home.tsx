@@ -103,9 +103,9 @@ export default function Home() {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden" data-testid="section-hero">
         <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black z-0" />
         <div
-          className="absolute inset-0 opacity-50 z-0"
+          className="absolute inset-0 opacity-75 z-0"
           style={{
-            backgroundImage: `url('/hero-fleet.jpg')`,
+            backgroundImage: `url('/hero-fleet-new.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
