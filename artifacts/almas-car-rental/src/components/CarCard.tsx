@@ -43,11 +43,11 @@ export default function CarCard({
         data-testid={`card-car-${name}`}
       >
         {/* Image */}
-        <div className="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 h-72">
+        <div className="relative overflow-hidden bg-white h-72">
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
             data-testid={`img-car-${name}`}
           />
           {badge && (
