@@ -99,6 +99,7 @@ export default function CategoryPage({
                 badge={car.badge}
                 badgeColor={car.badgeColor}
                 colors={car.colors}
+                specs={car.specs}
                 onBook={() => handleBook(car.name)}
               />
             ))}

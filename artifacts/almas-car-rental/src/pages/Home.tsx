@@ -32,12 +32,12 @@ const features = [
 
 const categories = [
   {
-    href: "/sports",
-    label: "السيارات الرياضية",
-    icon: Zap,
-    desc: "أداء استثنائي وسرعات خيالية لعشاق القيادة",
-    image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
-    gradient: "from-gray-900 to-gray-700",
+    href: "/luxury",
+    label: "السيارات الفاخرة",
+    icon: Gem,
+    desc: "الفخامة والرقي لأعلى مستويات الراحة والتميز",
+    image: "/hero-luxury.jpg",
+    gradient: "from-gray-900 to-gray-600",
   },
   {
     href: "/economy",
@@ -56,12 +56,12 @@ const categories = [
     gradient: "from-gray-900 to-gray-700",
   },
   {
-    href: "/luxury",
-    label: "السيارات الفاخرة",
-    icon: Gem,
-    desc: "الفخامة والرقي لأعلى مستويات الراحة والتميز",
-    image: "/hero-luxury.jpg",
-    gradient: "from-gray-900 to-gray-600",
+    href: "/sports",
+    label: "السيارات الرياضية",
+    icon: Zap,
+    desc: "أداء استثنائي وسرعات خيالية لعشاق القيادة",
+    image: "https://images.unsplash.com/photo-1612544448445-b8232cff3b6c?w=600&auto=format&fit=crop&q=80",
+    gradient: "from-gray-900 to-gray-700",
   },
 ];
 

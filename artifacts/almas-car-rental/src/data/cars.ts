@@ -1,3 +1,10 @@
+export interface CarSpecs {
+  engine: string;
+  transmission: string;
+  interior: string;
+  safety: string;
+}
+
 export interface Car {
   id: number;
   name: string;
@@ -12,6 +19,7 @@ export interface Car {
   description?: string;
   features?: string[];
   colors?: string[];
+  specs?: CarSpecs;
 }
 
 export const cars: Car[] = [
@@ -27,7 +35,13 @@ export const cars: Car[] = [
     rating: 4.8,
     badge: "الأشهر",
     badgeColor: "bg-gray-700",
-    features: ["محرك V8 5.0L", "450 حصان", "نظام مساعدة المسار", "عجلة تحكم رياضية"],
+    features: ["محرك 2.3L تيربو", "310 حصان", "نظام Sync 3", "عجلة تحكم رياضية"],
+    specs: {
+      engine: "محرك 2.3 لتر تيربو، قوة 310 حصان",
+      transmission: "أوتوماتيكي بـ 10 سرعات",
+      interior: "تصميم رياضي كلاسيكي، عدادات رقمية قابلة للتخصيص، نظام الترفيه Sync 3",
+      safety: "نظام MyKey للمراقبة، فرامل ABS، وسائد هوائية لحماية الركبة",
+    },
   },
   {
     id: 2,
@@ -38,11 +52,17 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "255 كم/س",
     rating: 4.7,
-    features: ["محرك V8 6.2L", "455 حصان", "وضع Sport", "شاشة HUD"],
+    features: ["محرك V6 3.6L", "335 حصان", "وضع Sport", "شاشة لمس"],
+    specs: {
+      engine: "محرك V6 سعة 3.6 لتر، قوة 335 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات",
+      interior: "شاشة لمس، وضعيات قيادة متعددة، مقاعد رياضية مريحة",
+      safety: "كاميرا خلفية، نظام تنبيه المنطقة العمياء، هيكل فولاذي صلب",
+    },
   },
   {
     id: 3,
-    name: "Dodge Challenger 2022",
+    name: "Dodge Challenger SXT 2022",
     category: "sports",
     image: "/car-challenger.jpg",
     seats: 5,
@@ -52,22 +72,34 @@ export const cars: Car[] = [
     badge: "الأكثر طلباً",
     badgeColor: "bg-red-600",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["محرك V8 6.4L", "485 حصان", "فرامل Brembo", "مقاعد رياضية جلدية"],
+    features: ["محرك V6 Pentastar 3.6L", "305 حصان", "فرامل Brembo", "مقاعد جلد نابا"],
+    specs: {
+      engine: "محرك V6 Pentastar سعة 3.6 لتر، قوة 305 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات Torqueflite",
+      interior: "مقاعد جلد نابا، شاشة Uconnect مقاس 8.4 بوصة، جنوط 20 بوصة",
+      safety: "نظام مساعدة الفرامل، رصد النقطة العمياء، وسائد هوائية جانبية",
+    },
   },
   {
     id: 4,
-    name: "Chrysler 300 2021",
+    name: "Chrysler 300S 2022",
     category: "sports",
     image: "/car-chrysler300.jpeg",
     seats: 5,
     fuelType: "بنزين",
     speed: "235 كم/س",
     rating: 4.6,
-    features: ["تصميم كلاسيكي فاخر", "مقاعد جلدية", "شاشة 8.4 بوصة", "نظام صوت Alpine"],
+    features: ["تصميم كلاسيكي فاخر", "V6 3.6L 300 حصان", "شاشة 8.4 بوصة", "نظام صوت Alpine"],
+    specs: {
+      engine: "محرك V6 سعة 3.6 لتر، قوة 300 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات مع مقابض تبديل خلف المقود",
+      interior: "نظام صوتي Alpine، تصميم خارجي بلمسات سوداء، مقاعد جلدية رياضية",
+      safety: "تنبيه مغادرة المسار، مثبت سرعة ذكي، حساسات ركن شاملة",
+    },
   },
   {
     id: 5,
-    name: "Dodge Charger 2022",
+    name: "Dodge Charger GT 2023",
     category: "sports",
     image: "/car-charger.png",
     seats: 5,
@@ -75,7 +107,13 @@ export const cars: Car[] = [
     speed: "250 كم/س",
     rating: 4.9,
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["محرك V8 HEMI", "أداء استثنائي", "4 أبواب", "دفع خلفي"],
+    features: ["محرك V6 3.6L", "300 حصان", "4 أبواب", "دفع خلفي"],
+    specs: {
+      engine: "محرك V6 سعة 3.6 لتر، قوة 300 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات، دفع خلفي",
+      interior: "غطاء محرك رياضي، مقاعد رياضية، نظام ترفيه Uconnect",
+      safety: "نظام تنبيه التصادم، كاميرا بارك فيو، التحكم الإلكتروني بالثبات",
+    },
   },
   {
     id: 6,
@@ -86,7 +124,13 @@ export const cars: Car[] = [
     fuelType: "بنزين",
     speed: "210 كم/س",
     rating: 4.7,
-    features: ["محرك بنزين 2.5L", "تصميم عصري 2025", "شاشة 12.3 بوصة", "Toyota Safety Sense"],
+    features: ["محرك 2.5L", "201 حصان", "شاشة معلومات", "Toyota Safety Sense"],
+    specs: {
+      engine: "محرك 4 سلندر سعة 2.5 لتر، قوة 201 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات",
+      interior: "مصابيح LED، شاشة معلومات، مقاعد مخمل، تحكم بالمقود",
+      safety: "6 وسائد هوائية، نظام منع الانزلاق، حساسات خلفية",
+    },
   },
   {
     id: 28,
@@ -100,17 +144,29 @@ export const cars: Car[] = [
     badge: "جديد",
     badgeColor: "bg-gray-900",
     features: ["تصميم رياضي أنيق", "شاشة بانورامية منحنية", "نظام صوت Bose", "مثبت سرعة تكيفي"],
+    specs: {
+      engine: "محرك 4 سلندر سعة 2.5 لتر، قوة 191 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات",
+      interior: "تصميم انسيابي، شاشة لمس 8 بوصة، تكييف يدوي، LED نهاري",
+      safety: "مساعد تجنب الاصطدام، تنبيه انتباه السائق، وسائد أمامية",
+    },
   },
   {
     id: 29,
-    name: "Hyundai Kona N 2025",
+    name: "Hyundai Kona N Line 2025",
     category: "sports",
     image: "/car-kona.jpeg",
     seats: 5,
     fuelType: "بنزين",
     speed: "240 كم/س",
     rating: 4.6,
-    features: ["أداء N-Line رياضي", "عجلة تحكم N Sport", "فرامل Brembo", "وضع N Grin Shift"],
+    features: ["أداء N-Line رياضي", "1.6L تيربو 190 حصان", "فرامل عالية الأداء", "مقاعد N Line"],
+    specs: {
+      engine: "محرك 1.6 لتر تيربو، قوة 190 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات",
+      interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
+      safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
+    },
   },
 
   // Economy
@@ -127,6 +183,12 @@ export const cars: Car[] = [
     badgeColor: "bg-green-600",
     colors: ["#ffffff", "#1a1a1a"],
     features: ["Apple CarPlay & Android Auto", "مقاعد قماشية مريحة", "تحكم مناخي تلقائي", "إضاءة LED أمامية"],
+    specs: {
+      engine: "محرك 1.6 لتر، قوة 123 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "مقاعد قماش، شاشة معلومات، تحكم بالصوت",
+      safety: "وسائد هوائية أمامية، نظام مانع الانزلاق",
+    },
   },
   {
     id: 8,
@@ -141,6 +203,12 @@ export const cars: Car[] = [
     badgeColor: "bg-blue-600",
     colors: ["#ffffff", "#1a1a1a"],
     features: ["شاشة لمس 10.25 بوصة", "نظام تنبيه المسار", "مثبت سرعة تكيفي", "كاميرا خلفية HD"],
+    specs: {
+      engine: "محرك 1.6 لتر، قوة 123 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "تصميم انسيابي، إضاءة LED، فتحات تكييف خلفية",
+      safety: "نظام تثبيت السرعة، كاميرا، حساسات خلفية",
+    },
   },
   {
     id: 9,
@@ -154,7 +222,33 @@ export const cars: Car[] = [
     badge: "هجين",
     badgeColor: "bg-teal-600",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["محرك هجين موفر للوقود", "شاشة لمس ذكية", "شحن سريع", "قيادة هادئة"],
+    features: ["محرك هجين DM-i 1.5L", "شاشة دوارة", "مقاعد جلد فاخرة", "تقنيات ذكية"],
+    specs: {
+      engine: "محرك هجين (DM-i) 1.5 لتر مع محرك كهربائي",
+      transmission: "E-CVT",
+      interior: "شاشة دوارة، مقاعد جلد فاخرة، تقنيات ذكية",
+      safety: "كاميرات 360، قيادة شبه ذاتية، حساسات محيطية",
+    },
+  },
+  {
+    id: 31,
+    name: "BYD Seal 05",
+    category: "economy",
+    image: "/car-byd-qin.jpg",
+    seats: 5,
+    fuelType: "هجين",
+    speed: "200 كم/س",
+    rating: 4.7,
+    badge: "PHEV",
+    badgeColor: "bg-teal-700",
+    colors: ["#ffffff", "#1a1a1a"],
+    features: ["نظام PHEV عالي الكفاءة", "تصميم رياضي أنيق", "عزل صوتي ممتاز", "جودة داخلية عالية"],
+    specs: {
+      engine: "نظام هجين (PHEV) عالي الكفاءة",
+      transmission: "ناقل حركة إلكتروني ذكي",
+      interior: "تصميم رياضي، جودة مواد داخلية عالية، عزل صوتي ممتاز",
+      safety: "رادار المشاة، نظام الكبح التلقائي الذكي",
+    },
   },
   {
     id: 10,
@@ -167,6 +261,12 @@ export const cars: Car[] = [
     rating: 4.4,
     colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم رياضي أنيق", "بلوتوث ومنفذ USB", "كاميرا خلفية", "مثبت سرعة"],
+    specs: {
+      engine: "محرك 1.5 لتر، قوة 115 حصان",
+      transmission: "IVT أوتوماتيكي",
+      interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
+      safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
+    },
   },
   {
     id: 11,
@@ -178,7 +278,13 @@ export const cars: Car[] = [
     speed: "180 كم/س",
     rating: 4.3,
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["اقتصادية في الوقود", "سهلة القيادة", "صيانة منخفضة التكلفة", "مريحة للرحلات اليومية"],
+    features: ["اقتصادية في الوقود", "سهلة القيادة", "شاشة 7 بوصة", "مفتاح ذكي"],
+    specs: {
+      engine: "محرك 1.6 لتر، قوة 118 حصان",
+      transmission: "Xtronic CVT",
+      interior: "شاشة 7 بوصة، مفتاح ذكي، كفاءة استهلاك وقود عالية",
+      safety: "تحذير تصادم أمامي، كبح طوارئ، وسائد هوائية",
+    },
   },
   {
     id: 12,
@@ -190,7 +296,13 @@ export const cars: Car[] = [
     speed: "182 كم/س",
     rating: 4.4,
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["Apple CarPlay", "كاميرا خلفية", "مقاعد مريحة", "إضاءة LED"],
+    features: ["Apple CarPlay", "كاميرا خلفية", "شاشة 8 بوصة", "إضاءة LED"],
+    specs: {
+      engine: "محرك 4 سلندر سعة 1.6 لتر، قوة 123 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "شاشة 8 بوصة، دعم Apple CarPlay، بلوتوث، تحكم بالمقود",
+      safety: "وسائد هوائية أمامية، نظام الثبات الإلكتروني، المساعدة على صعود التلال",
+    },
   },
   {
     id: 13,
@@ -202,6 +314,12 @@ export const cars: Car[] = [
     speed: "190 كم/س",
     rating: 4.5,
     features: ["شاشة 10.25 بوصة", "Apple CarPlay", "كاميرا خلفية", "مثبت سرعة تكيفي"],
+    specs: {
+      engine: "محرك 1.6 لتر، قوة 123 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "تصميم عصري، شاشة عرض مدمجة، تكييف خلفي",
+      safety: "6 وسائد هوائية قياسية، نظام المساعدة في المسار",
+    },
   },
   {
     id: 14,
@@ -214,7 +332,13 @@ export const cars: Car[] = [
     rating: 4.6,
     badge: "جديد",
     badgeColor: "bg-gray-900",
-    features: ["تصميم عصري", "شاشة لمس كبيرة", "نظام أمان متكامل", "تحكم مناخي"],
+    features: ["تصميم مستقبلي", "شاشات بانورامية", "مساحة خلفية واسعة", "نظام أمان متكامل"],
+    specs: {
+      engine: "محرك 2.0 لتر 4 سلندر، قوة 147 حصان",
+      transmission: "IVT أوتوماتيكي",
+      interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
+      safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
+    },
   },
   {
     id: 30,
@@ -229,12 +353,18 @@ export const cars: Car[] = [
     badgeColor: "bg-gray-800",
     colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم عصري أنيق", "شاشة لمس 10.1 بوصة", "Apple CarPlay & Android Auto", "نظام أمان متكامل"],
+    specs: {
+      engine: "محرك 1.5 لتر، قوة 118 حصان",
+      transmission: "CVT",
+      interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
+      safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
+    },
   },
 
   // Family
   {
     id: 15,
-    name: "Jeep Laredo 2020",
+    name: "Jeep Grand Cherokee 2020",
     category: "family",
     image: "/car-jeep.webp",
     seats: 5,
@@ -242,7 +372,13 @@ export const cars: Car[] = [
     speed: "200 كم/س",
     rating: 4.6,
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["دفع رباعي", "مقاعد جلدية", "شاشة 8.4 بوصة", "كاميرا خلفية"],
+    features: ["دفع رباعي", "مقاعد جلدية", "شاشة 7 بوصة", "كاميرا خلفية"],
+    specs: {
+      engine: "محرك V6 سعة 3.6 لتر، قوة 290 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات، دفع رباعي",
+      interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
+      safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
+    },
   },
   {
     id: 16,
@@ -257,6 +393,12 @@ export const cars: Car[] = [
     badgeColor: "bg-blue-600",
     colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم عصري 2025", "شاشة بانورامية", "نظام أمان متقدم", "كاميرا 360°"],
+    specs: {
+      engine: "محرك 2.0 لتر 4 سلندر، قوة 156 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "فتحة سقف بانورامية، شاشة، كاميرا، تشغيل عن بعد",
+      safety: "فرامل ABS، نظام المساعدة في المرتفعات، حساسات إطارات",
+    },
   },
   {
     id: 17,
@@ -269,6 +411,12 @@ export const cars: Car[] = [
     rating: 4.7,
     colors: ["#ffffff", "#1a1a1a"],
     features: ["شاشة مزدوجة منحنية", "Apple CarPlay", "فتحة سقف بانورامية", "مقاعد مريحة"],
+    specs: {
+      engine: "محرك 2.0 لتر، قوة 156 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "شاشة مزدوجة منحنية، Apple CarPlay، فتحة سقف بانورامية",
+      safety: "نظام الأمان الشامل، وسائد هوائية متعددة، كاميرا خلفية",
+    },
   },
   {
     id: 18,
@@ -282,7 +430,13 @@ export const cars: Car[] = [
     badge: "7 مقاعد",
     badgeColor: "bg-gray-800",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["7 مقاعد", "Harman Kardon صوت", "كاميرا 360°", "تحكم مناخي ثلاثي المناطق"],
+    features: ["7 مقاعد جلد", "شاشتين 12.3 بوصة", "تبريد مقاعد", "إضاءة محيطية"],
+    specs: {
+      engine: "محرك V6 سعة 3.5 لتر، قوة 272 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات، دفع رباعي",
+      interior: "3 صفوف مقاعد جلد، شاشتين 12.3 بوصة، تبريد مقاعد، إضاءة محيطية",
+      safety: "قيادة مساعدة ذكية، كاميرات 360، رادار النقاط العمياء الشامل",
+    },
   },
   {
     id: 25,
@@ -295,6 +449,12 @@ export const cars: Car[] = [
     rating: 4.6,
     colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم رياضي أنيق", "شاشة لمس 10.25 بوصة", "مثبت سرعة تكيفي", "بلوتوث"],
+    specs: {
+      engine: "محرك 2.0 لتر، قوة 156 حصان",
+      transmission: "أوتوماتيكي بـ 6 سرعات",
+      interior: "تصميم خارجي جريء، مثبت سرعة، شاشة ترفيه",
+      safety: "وسائد هوائية أمامية، نظام منع الانغلاق، كاميرا خلفية",
+    },
   },
   {
     id: 26,
@@ -308,7 +468,13 @@ export const cars: Car[] = [
     badge: "هجين",
     badgeColor: "bg-teal-600",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["محرك هجين توفير الوقود", "Toyota Safety Sense", "شاشة 10.5 بوصة", "كاميرا خلفية"],
+    features: ["هايبرد 1.8L", "Apple CarPlay", "اقتصاد ممتاز بالوقود", "Toyota Safety Sense"],
+    specs: {
+      engine: "محرك 1.8 لتر هايبرد (Hybrid)، قوة 121 حصان",
+      transmission: "CVT تتابعي",
+      interior: "كروس أوفر مرتفعة، شاشة Apple CarPlay، اقتصاد ممتاز للوقود",
+      safety: "وسائد هوائية شاملة، نظام التوازن الميكانيكي، حساسات",
+    },
   },
   {
     id: 27,
@@ -321,12 +487,18 @@ export const cars: Car[] = [
     rating: 4.5,
     colors: ["#ffffff", "#1a1a1a"],
     features: ["تصميم جريء", "شاشة 10.25 بوصة", "Apple CarPlay & Android Auto", "كاميرا خلفية"],
+    specs: {
+      engine: "محرك سعة 1.5 لتر، قوة 115 حصان",
+      transmission: "IVT (أوتوماتيكي)",
+      interior: "حجم مدمج، شاشة ترفيه، إضاءة متفاعلة",
+      safety: "حساسات ركن، كاميرا، نظام المساعدة في الصعود",
+    },
   },
 
   // Luxury
   {
     id: 19,
-    name: "Yukon Denali 2025",
+    name: "GMC Yukon Denali 2025",
     category: "luxury",
     image: "/car-yukon.jpg",
     seats: 7,
@@ -336,11 +508,17 @@ export const cars: Car[] = [
     badge: "الأفضل",
     badgeColor: "bg-gray-900",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["7 مقاعد فاخرة", "شاشة 15 بوصة", "نظام صوت Bose", "تحكم مناخي رباعي المناطق"],
+    features: ["7 مقاعد فاخرة", "شاشة 15 بوصة", "نظام صوت Bose", "Super Cruise"],
+    specs: {
+      engine: "محرك V8 سعة 6.2 لتر، قوة 420 حصان، عزم 623 نيوتن متر",
+      transmission: "أوتوماتيكي بـ 10 سرعات، نظام دفع رباعي (4WD)",
+      interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
+      safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
+    },
   },
   {
     id: 20,
-    name: "Land Cruiser 2025",
+    name: "Land Cruiser GXR 2025",
     category: "luxury",
     image: "/car-landcruiser.jpg",
     seats: 7,
@@ -350,11 +528,17 @@ export const cars: Car[] = [
     badge: "الأقوى",
     badgeColor: "bg-gray-800",
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["محرك V6 Twin-Turbo", "نظام 4WD متقدم", "مقاعد جلدية فاخرة", "شاشة 12.3 بوصة"],
+    features: ["V6 توين تيربو 409 حصان", "أنظمة طرق وعرة", "ثلاجة داخلية", "إضاءة عتبات ليمتد"],
+    specs: {
+      engine: "محرك V6 سعة 3.5 لتر توين تيربو، قوة 409 حصان",
+      transmission: "أوتوماتيكي بـ 10 سرعات، دفع رباعي مع أنظمة طرق وعرة",
+      interior: "شاشة ملاحة، فتحة سقف، ثلاجة داخلية، إضاءة عتبات ليمتد",
+      safety: "نظام تويوتا للأمان (TSS)، وسائد هوائية كاملة، نظام الزحف والدوران",
+    },
   },
   {
     id: 21,
-    name: "Tahoe Premier 2024",
+    name: "Chevrolet Tahoe 2024",
     category: "luxury",
     image: "/car-tahoe.jpg",
     seats: 8,
@@ -362,11 +546,17 @@ export const cars: Car[] = [
     speed: "205 كم/س",
     rating: 4.8,
     colors: ["#ffffff", "#1a1a1a"],
-    features: ["8 مقاعد فاخرة", "شاشات ترفيهية خلفية", "نظام تحكم هوائي", "كاميرا 360°"],
+    features: ["8 مقاعد فاخرة", "شاشات ترفيهية خلفية", "V8 5.3L 355 حصان", "تعليق مغناطيسي"],
+    specs: {
+      engine: "محرك V8 سعة 5.3 لتر، قوة 355 حصان",
+      transmission: "أوتوماتيكي بـ 10 سرعات، دفع رباعي",
+      interior: "شاشات خلفية، مقاعد منفصلة في الصف الثاني، نظام تعليق مغناطيسي مريح",
+      safety: "تنبيه تصادم أمامي، مساعد البقاء في المسار، رادار كشف المشاة",
+    },
   },
   {
     id: 22,
-    name: "Land Rover SVR 2022",
+    name: "Range Rover SVR 2022",
     category: "luxury",
     image: "/car-rangerover-new.png",
     seats: 5,
@@ -375,18 +565,30 @@ export const cars: Car[] = [
     rating: 4.9,
     badge: "محرك رياضي",
     badgeColor: "bg-red-700",
-    features: ["محرك V8 5.0L سوبرتشارجر", "575 حصان", "فتحة سقف بانورامية", "مقاعد رياضية جلدية"],
+    features: ["V8 سوبرتشارجر 575 حصان", "فتحة سقف بانورامية", "ديكورات كربون", "فرامل Brembo"],
+    specs: {
+      engine: "محرك V8 سوبر تشارجد سعة 5.0 لتر، قوة 575 حصان",
+      transmission: "أوتوماتيكي بـ 8 سرعات مع وضعيات قيادة رياضية",
+      interior: "مقاعد رياضية SVR، ديكورات ألياف الكربون، سقف بانورامي",
+      safety: "فرامل بريمبو عالية الأداء، نظام الثبات على المنعطفات، حساسات محيطية",
+    },
   },
   {
     id: 23,
-    name: "BMW 228i 2025",
+    name: "BMW 228i 2022",
     category: "luxury",
     image: "/car-bmw228i.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "250 كم/س",
     rating: 4.8,
-    features: ["شاشة BMW iDrive 8", "قيادة رياضية فاخرة", "مقاعد ذات تسخين", "نظام صوت Harman Kardon"],
+    features: ["شاشة BMW iDrive 8", "دفع كلي xDrive", "إضاءة داخلية محيطية", "مقاعد SensaTec"],
+    specs: {
+      engine: "محرك 4 سلندر تيربو سعة 2.0 لتر، قوة 228 حصان",
+      transmission: "أوتوماتيكي رياضي بـ 8 سرعات، دفع كلي xDrive",
+      interior: "شاشة عدادات رقمية، نظام iDrive المتطور، إضاءة داخلية محيطية، مقاعد رياضية SensaTec",
+      safety: "نظام المساعدة في القيادة النشط، كشف النقاط العمياء، تنبيه مغادرة المسار",
+    },
   },
   {
     id: 24,
@@ -399,7 +601,13 @@ export const cars: Car[] = [
     rating: 4.9,
     badge: "الأكثر طلباً",
     badgeColor: "bg-gray-700",
-    features: ["نظام AIRMATIC", "شاشة OLED فاخرة", "مقاعد تدليك", "رؤية ليلية"],
+    features: ["شاشات عرض مزدوجة", "نظام MBUX", "إضاءة 64 لون", "جلود فاخرة"],
+    specs: {
+      engine: "محرك تيربو سعة 2.0 لتر، قوة 197 حصان",
+      transmission: "أوتوماتيكي بـ 9 سرعات (9G-TRONIC)",
+      interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
+      safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
+    },
   },
 ];
 
