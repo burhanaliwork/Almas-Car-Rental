@@ -191,6 +191,7 @@ export const cars: Car[] = [
       interior: "مقاعد قماش، شاشة معلومات، تحكم بالصوت",
       safety: "وسائد هوائية أمامية، نظام مانع الانزلاق",
     },
+    images: ["/car-cerato-new.png", "/car-forte-2.jpeg", "/car-forte-3.jpeg"],
   },
   {
     id: 8,
@@ -308,12 +309,13 @@ export const cars: Car[] = [
       interior: "شاشة 8 بوصة، دعم Apple CarPlay، بلوتوث، تحكم بالمقود",
       safety: "وسائد هوائية أمامية، نظام الثبات الإلكتروني، المساعدة على صعود التلال",
     },
+    images: ["/car-rio.png", "/car-rio-2.jpeg", "/car-rio-3.jpeg"],
   },
   {
     id: 13,
     name: "Kia K3 2025",
     category: "economy",
-    image: "/car-k3.png",
+    image: "/car-k3-front.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "190 كم/س",
@@ -325,6 +327,7 @@ export const cars: Car[] = [
       interior: "تصميم عصري، شاشة عرض مدمجة، تكييف خلفي",
       safety: "6 وسائد هوائية قياسية، نظام المساعدة في المسار",
     },
+    images: ["/car-k3-front.png", "/car-k3-2.png"],
   },
   {
     id: 14,
@@ -344,6 +347,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
+    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg"],
   },
   {
     id: 30,
@@ -522,7 +526,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
       safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
     },
-    images: ["/car-yukon.jpg", "/car-yukon-2.png", "/car-tahoe-2.png"],
+    images: ["/car-yukon.jpg", "/car-yukon-denali-rear.jpeg"],
   },
   {
     id: 20,
@@ -661,6 +665,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس 8 بوصة، Apple CarPlay & Android Auto، تحكم مناخي تلقائي",
       safety: "Toyota Safety Sense، 8 وسائد هوائية، نظام الثبات الإلكتروني، كاميرا خلفية",
     },
+    images: ["/car-corolla2025.png", "/car-corolla2025-2.png", "/car-corolla2025-3.png"],
   },
 
   // New Family Car
