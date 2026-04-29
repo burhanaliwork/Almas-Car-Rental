@@ -85,7 +85,7 @@ export const cars: Car[] = [
     id: 4,
     name: "Chrysler 300S 2022",
     category: "sports",
-    image: "/car-chrysler-new.png",
+    image: "/car-chrysler-studio.jpeg",
     seats: 5,
     fuelType: "بنزين",
     speed: "235 كم/س",
@@ -132,6 +132,7 @@ export const cars: Car[] = [
       interior: "مصابيح LED، شاشة معلومات، مقاعد مخمل، تحكم بالمقود",
       safety: "6 وسائد هوائية، نظام منع الانزلاق، حساسات خلفية",
     },
+    images: ["/car-camry2025-new.jpeg", "/car-camry2025-2.jpeg", "/car-camry2025-3.jpeg"],
   },
   {
     id: 28,
@@ -156,7 +157,7 @@ export const cars: Car[] = [
     id: 29,
     name: "Hyundai Kona N Line 2025",
     category: "sports",
-    image: "/car-kona-new.png",
+    image: "/car-kona-studio.jpeg",
     seats: 5,
     fuelType: "بنزين",
     speed: "240 كم/س",
@@ -441,6 +442,7 @@ export const cars: Car[] = [
       interior: "3 صفوف مقاعد جلد، شاشتين 12.3 بوصة، تبريد مقاعد، إضاءة محيطية",
       safety: "قيادة مساعدة ذكية، كاميرات 360، رادار النقاط العمياء الشامل",
     },
+    images: ["/car-sorento.png", "/car-sorento-2.jpeg", "/car-sorento-3.jpeg"],
   },
   {
     id: 25,
@@ -520,7 +522,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
       safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
     },
-    images: ["/car-yukon.jpg", "/car-yukon-2.png"],
+    images: ["/car-yukon.jpg", "/car-yukon-2.png", "/car-tahoe-2.png"],
   },
   {
     id: 20,
@@ -560,6 +562,7 @@ export const cars: Car[] = [
       interior: "شاشات خلفية، مقاعد منفصلة في الصف الثاني، نظام تعليق مغناطيسي مريح",
       safety: "تنبيه تصادم أمامي، مساعد البقاء في المسار، رادار كشف المشاة",
     },
+    images: ["/car-tahoe-new.png", "/car-tahoe-2.png", "/car-tahoe-3.png"],
   },
   {
     id: 22,
@@ -721,7 +724,7 @@ export const cars: Car[] = [
       interior: "شاشة iDrive 12.3 بوصة، مقاعد جلد ناباصوفت، نظام صوت Harman Kardon، إضاءة محيطية",
       safety: "نظام مساعدة القيادة BMW، كشف النقاط العمياء، تنبيه مغادرة المسار، رادار أمامي",
     },
-    images: ["/car-bmw525i.png", "/car-bmw525-1.png", "/car-bmw525-2.jpeg", "/car-bmw525-3.jpeg", "/car-bmw525-4.png"],
+    images: ["/car-bmw525i.png", "/car-bmw525-1.png", "/car-bmw525-2.jpeg", "/car-bmw525-3.jpeg", "/car-bmw525-4.png", "/car-bmw525-4.jpeg"],
   },
 ];
 
