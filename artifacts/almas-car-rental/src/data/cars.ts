@@ -115,6 +115,7 @@ export const cars: Car[] = [
       interior: "غطاء محرك رياضي، مقاعد رياضية، نظام ترفيه Uconnect",
       safety: "نظام تنبيه التصادم، كاميرا بارك فيو، التحكم الإلكتروني بالثبات",
     },
+    images: ["/car-charger-new.png", "/car-charger-2.png", "/car-charger-3.png", "/car-charger-4.jpeg"],
   },
   {
     id: 6,
@@ -152,6 +153,7 @@ export const cars: Car[] = [
       interior: "تصميم انسيابي، شاشة لمس 8 بوصة، تكييف يدوي، LED نهاري",
       safety: "مساعد تجنب الاصطدام، تنبيه انتباه السائق، وسائد أمامية",
     },
+    images: ["/car-k5-new.png", "/car-k5-2.png", "/car-k5-3.jpeg", "/car-k5-4.jpeg", "/car-k5-5.jpeg", "/car-k5-6.jpeg"],
   },
   {
     id: 29,
@@ -290,7 +292,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، مفتاح ذكي، كفاءة استهلاك وقود عالية",
       safety: "تحذير تصادم أمامي، كبح طوارئ، وسائد هوائية",
     },
-    images: ["/car-sunny-new.png", "/car-sunny-2.png", "/car-sunny-3.png", "/car-sunny-4.jpeg"],
+    images: ["/car-sunny-new.png", "/car-sunny-2.png", "/car-sunny-3.png", "/car-sunny-4.jpeg", "/car-sunny-5.png", "/car-sunny-6.png", "/car-sunny-7.jpeg"],
   },
   {
     id: 12,
@@ -688,6 +690,7 @@ export const cars: Car[] = [
       interior: "شاشة Uconnect 10.1 بوصة، مقاعد جلدية، تسخين مقاعد، فتحة سقف بانورامية",
       safety: "كاميرا 360°، رادار كشف الأجسام، وسائد هوائية متعددة، مساعد البقاء في المسار",
     },
+    images: ["/car-jeep2024.png", "/car-jeep-2.png", "/car-jeep-3.png", "/car-jeep-4.jpeg", "/car-jeep-5.jpeg", "/car-jeep-6.jpeg", "/car-jeep-7.jpeg", "/car-jeep-8.jpeg"],
   },
 
   // New Sports Car
@@ -708,6 +711,7 @@ export const cars: Car[] = [
       interior: "شاشة 9 بوصة، Apple CarPlay، مقاعد مخمل فاخرة، تحكم مناخي مزدوج",
       safety: "Toyota Safety Sense 2.0، 8 وسائد هوائية، نظام منع الانزلاق، كاميرا خلفية HD",
     },
+    images: ["/car-camry2024.png", "/car-camry24-2.png", "/car-camry24-3.png"],
   },
 
   // New Luxury Car
