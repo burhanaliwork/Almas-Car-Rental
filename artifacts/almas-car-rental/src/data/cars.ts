@@ -20,6 +20,7 @@ export interface Car {
   features?: string[];
   colors?: string[];
   specs?: CarSpecs;
+  images?: string[];
 }
 
 export const cars: Car[] = [
@@ -249,6 +250,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي، جودة مواد داخلية عالية، عزل صوتي ممتاز",
       safety: "رادار المشاة، نظام الكبح التلقائي الذكي",
     },
+    images: ["/car-byd-seal.jpeg", "/car-seal05-1.jpeg", "/car-seal05-2.jpeg", "/car-seal05-3.png"],
   },
   {
     id: 10,
@@ -493,6 +495,7 @@ export const cars: Car[] = [
       interior: "حجم مدمج، شاشة ترفيه، إضاءة متفاعلة",
       safety: "حساسات ركن، كاميرا، نظام المساعدة في الصعود",
     },
+    images: ["/car-seltos-new.jpeg", "/car-seltos-1.jpeg", "/car-seltos-2.jpeg", "/car-seltos-3.jpeg"],
   },
 
   // Luxury
@@ -515,6 +518,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
       safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
     },
+    images: ["/car-yukon.jpg", "/car-yukon-2.png"],
   },
   {
     id: 20,
@@ -535,6 +539,7 @@ export const cars: Car[] = [
       interior: "شاشة ملاحة، فتحة سقف، ثلاجة داخلية، إضاءة عتبات ليمتد",
       safety: "نظام تويوتا للأمان (TSS)، وسائد هوائية كاملة، نظام الزحف والدوران",
     },
+    images: ["/car-landcruiser-new.jpeg", "/car-lc-1.jpeg", "/car-lc-2.jpeg", "/car-lc-3.jpeg", "/car-lc-4.jpeg", "/car-lc-5.jpeg", "/car-lc-6.png"],
   },
   {
     id: 21,
@@ -711,6 +716,7 @@ export const cars: Car[] = [
       interior: "شاشة iDrive 12.3 بوصة، مقاعد جلد ناباصوفت، نظام صوت Harman Kardon، إضاءة محيطية",
       safety: "نظام مساعدة القيادة BMW، كشف النقاط العمياء، تنبيه مغادرة المسار، رادار أمامي",
     },
+    images: ["/car-bmw525i.png", "/car-bmw525-1.png", "/car-bmw525-2.jpeg", "/car-bmw525-3.jpeg", "/car-bmw525-4.png"],
   },
 ];
 

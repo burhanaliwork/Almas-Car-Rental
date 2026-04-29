@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Users, Fuel, Star, Calendar, Check, ClipboardList } from "lucide-react";
+import { Users, Fuel, Star, Calendar, Check, ClipboardList, Images } from "lucide-react";
 import { CarSpecs } from "@/data/cars";
 import SpecsModal from "./SpecsModal";
+import PhotoGalleryModal from "./PhotoGalleryModal";
 
 interface CarCardProps {
   name: string;
@@ -14,6 +15,7 @@ interface CarCardProps {
   badgeColor?: string;
   colors?: string[];
   specs?: CarSpecs;
+  images?: string[];
   onBook?: () => void;
 }
 
@@ -32,9 +34,13 @@ export default function CarCard({
   badgeColor = "bg-gray-900",
   colors,
   specs,
+  images,
   onBook,
 }: CarCardProps) {
   const [specsOpen, setSpecsOpen] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+
+  const hasGallery = images && images.length > 1;
 
   return (
     <>
@@ -43,7 +49,10 @@ export default function CarCard({
         data-testid={`card-car-${name}`}
       >
         {/* Image */}
-        <div className="relative overflow-hidden bg-white h-72">
+        <div
+          className="relative overflow-hidden bg-white h-72 cursor-pointer"
+          onClick={() => hasGallery && setGalleryOpen(true)}
+        >
           <img
             src={image}
             alt={name}
@@ -59,6 +68,12 @@ export default function CarCard({
             <Star className="w-3.5 h-3.5 text-gray-700 fill-gray-700" />
             <span className="text-xs font-bold text-gray-800">{rating}</span>
           </div>
+          {hasGallery && (
+            <div className="absolute bottom-3 right-3 flex items-center gap-1 bg-black/70 backdrop-blur-sm px-2 py-1 rounded-lg">
+              <Images className="w-3.5 h-3.5 text-white" />
+              <span className="text-xs font-bold text-white">{images.length}</span>
+            </div>
+          )}
         </div>
 
         {/* Content */}
@@ -116,6 +131,20 @@ export default function CarCard({
               احجز الآن
             </button>
 
+            {hasGallery && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setGalleryOpen(true);
+                }}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gray-800 hover:bg-gray-700 text-white font-bold text-sm transition-all duration-200"
+                data-testid={`button-gallery-${name}`}
+              >
+                <Images className="w-4 h-4" />
+                رؤية بقية الصور ({images.length})
+              </button>
+            )}
+
             {specs && (
               <button
                 onClick={(e) => {
@@ -139,6 +168,15 @@ export default function CarCard({
           onClose={() => setSpecsOpen(false)}
           carName={name}
           specs={specs}
+        />
+      )}
+
+      {hasGallery && (
+        <PhotoGalleryModal
+          isOpen={galleryOpen}
+          onClose={() => setGalleryOpen(false)}
+          carName={name}
+          images={images}
         />
       )}
     </>
