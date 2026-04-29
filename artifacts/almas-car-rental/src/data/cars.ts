@@ -210,6 +210,7 @@ export const cars: Car[] = [
       interior: "تصميم انسيابي، إضاءة LED، فتحات تكييف خلفية",
       safety: "نظام تثبيت السرعة، كاميرا، حساسات خلفية",
     },
+    images: ["/car-elantra-new.png", "/car-elantra-2.png", "/car-elantra-3.png", "/car-elantra-4.png", "/car-elantra-5.png", "/car-elantra-6.png"],
   },
   {
     id: 9,
@@ -287,6 +288,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، مفتاح ذكي، كفاءة استهلاك وقود عالية",
       safety: "تحذير تصادم أمامي، كبح طوارئ، وسائد هوائية",
     },
+    images: ["/car-sunny-new.png", "/car-sunny-2.png", "/car-sunny-3.png", "/car-sunny-4.jpeg"],
   },
   {
     id: 12,
@@ -577,6 +579,7 @@ export const cars: Car[] = [
       interior: "مقاعد رياضية SVR، ديكورات ألياف الكربون، سقف بانورامي",
       safety: "فرامل بريمبو عالية الأداء، نظام الثبات على المنعطفات، حساسات محيطية",
     },
+    images: ["/car-rangerover-new.png", "/car-rangerover-2.jpeg", "/car-rangerover-3.png"],
   },
   {
     id: 23,
@@ -594,6 +597,7 @@ export const cars: Car[] = [
       interior: "شاشة عدادات رقمية، نظام iDrive المتطور، إضاءة داخلية محيطية، مقاعد رياضية SensaTec",
       safety: "نظام المساعدة في القيادة النشط، كشف النقاط العمياء، تنبيه مغادرة المسار",
     },
+    images: ["/car-bmw228i-new.png", "/car-bmw228-2.jpeg", "/car-bmw228-3.jpeg", "/car-bmw228-4.jpeg", "/car-bmw228-5.jpeg", "/car-bmw228-6.jpeg", "/car-bmw228-7.jpeg"],
   },
   {
     id: 24,
@@ -613,6 +617,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
+    images: ["/car-mercedes-e.jpeg", "/car-merc-e-1.png", "/car-merc-e-2.jpeg"],
   },
 
   // New Economy Cars
