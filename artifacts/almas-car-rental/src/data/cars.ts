@@ -235,6 +235,7 @@ export const cars: Car[] = [
       interior: "شاشة دوارة، مقاعد جلد فاخرة، تقنيات ذكية",
       safety: "كاميرات 360، قيادة شبه ذاتية، حساسات محيطية",
     },
+    images: ["/car-byd-qin.jpg", "/car-byd-qin-2.jpeg", "/car-byd-qin-3.jpeg"],
   },
   {
     id: 31,
@@ -274,6 +275,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
+    images: ["/car-accent.png", "/car-accent-2.png", "/car-accent-3.png"],
   },
   {
     id: 11,
@@ -349,7 +351,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
-    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg"],
+    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg", "/car-k4-4.jpeg", "/car-k4-5.jpeg", "/car-k4-6.jpeg"],
   },
   {
     id: 30,
@@ -410,6 +412,7 @@ export const cars: Car[] = [
       interior: "فتحة سقف بانورامية، شاشة، كاميرا، تشغيل عن بعد",
       safety: "فرامل ABS، نظام المساعدة في المرتفعات، حساسات إطارات",
     },
+    images: ["/car-tucson2025-new.png", "/car-tucson-2.png", "/car-tucson-3.png", "/car-tucson-4.png", "/car-tucson-5.jpeg", "/car-tucson-6.jpeg", "/car-tucson-7.jpeg"],
   },
   {
     id: 17,
@@ -428,6 +431,7 @@ export const cars: Car[] = [
       interior: "شاشة مزدوجة منحنية، Apple CarPlay، فتحة سقف بانورامية",
       safety: "نظام الأمان الشامل، وسائد هوائية متعددة، كاميرا خلفية",
     },
+    images: ["/car-sportage2026.png", "/car-sportage2026-2.png", "/car-sportage2026-3.png", "/car-sportage2026-4.png"],
   },
   {
     id: 18,
@@ -647,6 +651,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، Apple CarPlay، تكييف تلقائي، مقاعد قماشية مريحة",
       safety: "كاميرا خلفية، وسائد هوائية أمامية، نظام ABS، مثبت السرعة",
     },
+    images: ["/car-sentra.png", "/car-sentra-2.png", "/car-sentra-3.png", "/car-sentra-4.png"],
   },
   {
     id: 33,
