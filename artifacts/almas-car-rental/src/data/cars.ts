@@ -43,7 +43,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي كلاسيكي، عدادات رقمية قابلة للتخصيص، نظام الترفيه Sync 3",
       safety: "نظام MyKey للمراقبة، فرامل ABS، وسائد هوائية لحماية الركبة",
     },
-    images: ["/car-mustang.png", "/car-mustang-rear.png"],
+    images: ["/car-mustang.png", "/car-mustang-front.jpeg", "/car-mustang-side.jpeg", "/car-mustang-rear.png", "/car-mustang-rear2.png"],
   },
   {
     id: 2,
@@ -61,6 +61,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، وضعيات قيادة متعددة، مقاعد رياضية مريحة",
       safety: "كاميرا خلفية، نظام تنبيه المنطقة العمياء، هيكل فولاذي صلب",
     },
+    images: ["/car-camaro.jpeg", "/car-camaro-side.png", "/car-camaro-rear.jpeg"],
   },
   {
     id: 3,
@@ -81,6 +82,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلد نابا، شاشة Uconnect مقاس 8.4 بوصة، جنوط 20 بوصة",
       safety: "نظام مساعدة الفرامل، رصد النقطة العمياء، وسائد هوائية جانبية",
     },
+    images: ["/car-challenger.jpg", "/car-challenger-side.jpeg", "/car-challenger-rear.jpeg"],
   },
   {
     id: 4,
@@ -98,7 +100,7 @@ export const cars: Car[] = [
       interior: "نظام صوتي Alpine، تصميم خارجي بلمسات سوداء، مقاعد جلدية رياضية",
       safety: "تنبيه مغادرة المسار، مثبت سرعة ذكي، حساسات ركن شاملة",
     },
-    images: ["/car-chrysler-studio.jpeg", "/car-chrysler-rear.jpeg"],
+    images: ["/car-chrysler-studio.jpeg", "/car-chrysler-side.jpeg", "/car-chrysler-rear.jpeg"],
   },
   {
     id: 5,
@@ -173,6 +175,7 @@ export const cars: Car[] = [
       interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
       safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
     },
+    images: ["/car-kona-studio.jpeg", "/car-kona-side.jpeg", "/car-kona-int.jpeg"],
   },
 
   // Economy
@@ -237,7 +240,7 @@ export const cars: Car[] = [
       interior: "شاشة دوارة، مقاعد جلد فاخرة، تقنيات ذكية",
       safety: "كاميرات 360، قيادة شبه ذاتية، حساسات محيطية",
     },
-    images: ["/car-byd-qin-2.jpeg", "/car-byd-qin-3.jpeg"],
+    images: ["/car-byd-qin-2.jpeg", "/car-byd-qin-3.jpeg", "/car-byd-qin-rear.jpeg"],
   },
   {
     id: 31,
@@ -277,7 +280,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
-    images: ["/car-accent.png", "/car-accent2024-rear.jpeg"],
+    images: ["/car-accent.png", "/car-accent2024-rear.jpeg", "/car-accent2024-int.png"],
   },
   {
     id: 11,
@@ -353,7 +356,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
-    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg"],
+    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg", "/car-k4-int1.jpeg", "/car-k4-int2.jpeg"],
   },
   {
     id: 30,
@@ -374,7 +377,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
       safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
     },
-    images: ["/car-mg5.png", "/car-mg5-rear.jpeg"],
+    images: ["/car-mg5.png", "/car-mg5-rear.jpeg", "/car-mg5-int.png"],
   },
 
   // Family
@@ -395,6 +398,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
       safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
     },
+    images: ["/car-jeep.webp", "/car-jeep2020-side.jpeg", "/car-jeep2020-rear.jpeg"],
   },
   {
     id: 16,
@@ -495,7 +499,7 @@ export const cars: Car[] = [
       interior: "كروس أوفر مرتفعة، شاشة Apple CarPlay، اقتصاد ممتاز للوقود",
       safety: "وسائد هوائية شاملة، نظام التوازن الميكانيكي، حساسات",
     },
-    images: ["/car-corolla-cross.png", "/car-corolla-cross-side.jpeg", "/car-corolla-cross-rear.jpeg"],
+    images: ["/car-corolla-cross.png", "/car-corolla-cross-side.jpeg", "/car-corolla-cross-rear.jpeg", "/car-corolla-cross-int.jpeg"],
   },
   {
     id: 27,
@@ -635,7 +639,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
-    images: ["/car-mercedes-e.jpeg", "/car-merc-e-2.jpeg"],
+    images: ["/car-mercedes-e.jpeg", "/car-merc-e-side.jpeg", "/car-merc-e-2.jpeg"],
   },
 
   // New Economy Cars
