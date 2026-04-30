@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm --filter @workspace/almas-car-rental run build"
+  publish = "artifacts/almas-car-rental/dist/public"
+
+[build.environment]
+  NODE_ENV = "production"
+  BASE_PATH = "/"
+  PNPM_VERSION = "9"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
