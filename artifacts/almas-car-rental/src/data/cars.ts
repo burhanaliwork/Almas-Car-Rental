@@ -43,7 +43,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي كلاسيكي، عدادات رقمية قابلة للتخصيص، نظام الترفيه Sync 3",
       safety: "نظام MyKey للمراقبة، فرامل ABS، وسائد هوائية لحماية الركبة",
     },
-    images: ["/car-mustang.png", "/car-mustang-side.png", "/car-mustang-rear.png"],
+    images: ["/car-mustang.png", "/car-mustang-rear.png"],
   },
   {
     id: 2,
@@ -61,7 +61,6 @@ export const cars: Car[] = [
       interior: "شاشة لمس، وضعيات قيادة متعددة، مقاعد رياضية مريحة",
       safety: "كاميرا خلفية، نظام تنبيه المنطقة العمياء، هيكل فولاذي صلب",
     },
-    images: ["/car-camaro.jpeg", "/car-camaro-side.png", "/car-camaro-rear.png"],
   },
   {
     id: 3,
@@ -82,7 +81,6 @@ export const cars: Car[] = [
       interior: "مقاعد جلد نابا، شاشة Uconnect مقاس 8.4 بوصة، جنوط 20 بوصة",
       safety: "نظام مساعدة الفرامل، رصد النقطة العمياء، وسائد هوائية جانبية",
     },
-    images: ["/car-challenger.jpg", "/car-challenger-side.jpeg", "/car-challenger-rear.png"],
   },
   {
     id: 4,
@@ -100,7 +98,7 @@ export const cars: Car[] = [
       interior: "نظام صوتي Alpine، تصميم خارجي بلمسات سوداء، مقاعد جلدية رياضية",
       safety: "تنبيه مغادرة المسار، مثبت سرعة ذكي، حساسات ركن شاملة",
     },
-    images: ["/car-chrysler-studio.jpeg", "/car-chrysler-side.png", "/car-chrysler-rear.jpeg"],
+    images: ["/car-chrysler-studio.jpeg", "/car-chrysler-rear.jpeg"],
   },
   {
     id: 5,
@@ -175,7 +173,6 @@ export const cars: Car[] = [
       interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
       safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
     },
-    images: ["/car-kona-studio.jpeg", "/car-tucson-int.png"],
   },
 
   // Economy
@@ -280,7 +277,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
-    images: ["/car-accent.png", "/car-accent2024-rear.jpeg", "/car-accent2024-int.png"],
+    images: ["/car-accent.png", "/car-accent2024-rear.jpeg"],
   },
   {
     id: 11,
@@ -356,7 +353,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
-    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg", "/car-k4-4.jpeg", "/car-k4-5.jpeg", "/car-k4-6.jpeg"],
+    images: ["/car-k4.png", "/car-k4-2.jpeg", "/car-k4-3.jpeg"],
   },
   {
     id: 30,
@@ -377,7 +374,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
       safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
     },
-    images: ["/car-mg5.png", "/car-mg5-rear.jpeg", "/car-mg5-int.png"],
+    images: ["/car-mg5.png", "/car-mg5-rear.jpeg"],
   },
 
   // Family
@@ -398,7 +395,6 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
       safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
     },
-    images: ["/car-jeep.webp", "/car-jeep2020-rear.png"],
   },
   {
     id: 16,
@@ -438,7 +434,7 @@ export const cars: Car[] = [
       interior: "شاشة مزدوجة منحنية، Apple CarPlay، فتحة سقف بانورامية",
       safety: "نظام الأمان الشامل، وسائد هوائية متعددة، كاميرا خلفية",
     },
-    images: ["/car-sportage2026.png", "/car-sportage2026-2.png", "/car-sportage2026-3.png", "/car-sportage2026-4.png"],
+    images: ["/car-sportage2026.png", "/car-sportage2026-2.png", "/car-sportage2026-3.png", "/car-sportage2026-4.png", "/car-k4-4.jpeg", "/car-k4-5.jpeg", "/car-k4-6.jpeg"],
   },
   {
     id: 18,
