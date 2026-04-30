@@ -176,7 +176,7 @@ export default function Home() {
               موقعنا
             </h2>
             <p className="text-muted-foreground text-lg">
-              موقعنا في الموصل - حي البريد - قرب ترافيك لايت المصارف
+              موقعنا في الموصل - حي البريد - مقابل فندق أبو جنه وفوق كوكل ماب
             </p>
           </div>
 
@@ -210,7 +210,7 @@ export default function Home() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">العنوان</p>
-                  <p className="text-sm font-semibold text-foreground">الموصل - حي البريد - قرب ترافيك لايت المصارف، مجاور خدمات كي كارد</p>
+                  <p className="text-sm font-semibold text-foreground">الموصل - حي البريد - مقابل فندق أبو جنه وفوق كوكل ماب، مجاور خدمات كي كارد</p>
                 </div>
               </div>
               <div className="flex items-center gap-3 p-4">
