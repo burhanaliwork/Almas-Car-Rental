@@ -43,6 +43,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي كلاسيكي، عدادات رقمية قابلة للتخصيص، نظام الترفيه Sync 3",
       safety: "نظام MyKey للمراقبة، فرامل ABS، وسائد هوائية لحماية الركبة",
     },
+    images: ["/car-mustang.png", "/car-mustang-side.png", "/car-mustang-rear.png"],
   },
   {
     id: 2,
@@ -60,6 +61,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، وضعيات قيادة متعددة، مقاعد رياضية مريحة",
       safety: "كاميرا خلفية، نظام تنبيه المنطقة العمياء، هيكل فولاذي صلب",
     },
+    images: ["/car-camaro.jpeg", "/car-camaro-side.png", "/car-camaro-rear.png"],
   },
   {
     id: 3,
@@ -97,6 +99,7 @@ export const cars: Car[] = [
       interior: "نظام صوتي Alpine، تصميم خارجي بلمسات سوداء، مقاعد جلدية رياضية",
       safety: "تنبيه مغادرة المسار، مثبت سرعة ذكي، حساسات ركن شاملة",
     },
+    images: ["/car-chrysler-studio.jpeg", "/car-chrysler-side.png", "/car-chrysler-rear.jpeg"],
   },
   {
     id: 5,
@@ -220,7 +223,7 @@ export const cars: Car[] = [
     id: 9,
     name: "BYD Qin Plus 2025",
     category: "economy",
-    image: "/car-byd-qin.jpg",
+    image: "/car-byd-qin-2.jpeg",
     seats: 5,
     fuelType: "هجين",
     speed: "185 كم/س",
@@ -235,7 +238,7 @@ export const cars: Car[] = [
       interior: "شاشة دوارة، مقاعد جلد فاخرة، تقنيات ذكية",
       safety: "كاميرات 360، قيادة شبه ذاتية، حساسات محيطية",
     },
-    images: ["/car-byd-qin.jpg", "/car-byd-qin-2.jpeg", "/car-byd-qin-3.jpeg"],
+    images: ["/car-byd-qin-2.jpeg", "/car-byd-qin-3.jpeg"],
   },
   {
     id: 31,
@@ -275,7 +278,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
-    images: ["/car-accent.png", "/car-accent-2.png", "/car-accent-3.png"],
+    images: ["/car-accent.png", "/car-accent2024-rear.jpeg"],
   },
   {
     id: 11,
@@ -372,6 +375,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
       safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
     },
+    images: ["/car-mg5.png", "/car-mg5-rear.jpeg"],
   },
 
   // Family
@@ -392,6 +396,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
       safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
     },
+    images: ["/car-jeep.webp", "/car-jeep2020-side.png", "/car-jeep2020-rear.png"],
   },
   {
     id: 16,
@@ -491,6 +496,7 @@ export const cars: Car[] = [
       interior: "كروس أوفر مرتفعة، شاشة Apple CarPlay، اقتصاد ممتاز للوقود",
       safety: "وسائد هوائية شاملة، نظام التوازن الميكانيكي، حساسات",
     },
+    images: ["/car-corolla-cross.png", "/car-corolla-cross-rear.jpeg"],
   },
   {
     id: 27,
@@ -572,7 +578,7 @@ export const cars: Car[] = [
       interior: "شاشات خلفية، مقاعد منفصلة في الصف الثاني، نظام تعليق مغناطيسي مريح",
       safety: "تنبيه تصادم أمامي، مساعد البقاء في المسار، رادار كشف المشاة",
     },
-    images: ["/car-tahoe-new.png", "/car-tahoe-2.png", "/car-tahoe-3.png"],
+    images: ["/car-tahoe-new.png", "/car-tahoe-2.png", "/car-tahoe-3.png", "/car-tahoe-int-1.jpeg", "/car-tahoe-int-2.jpeg", "/car-tahoe-int-3.jpeg", "/car-tahoe-int-4.jpeg", "/car-tahoe-int-5.jpeg"],
   },
   {
     id: 22,
@@ -672,7 +678,26 @@ export const cars: Car[] = [
       interior: "شاشة لمس 8 بوصة، Apple CarPlay & Android Auto، تحكم مناخي تلقائي",
       safety: "Toyota Safety Sense، 8 وسائد هوائية، نظام الثبات الإلكتروني، كاميرا خلفية",
     },
-    images: ["/car-corolla2025.png", "/car-corolla2025-2.png", "/car-corolla2025-3.png"],
+    images: ["/car-corolla2025.png", "/car-corolla2025-2.png", "/car-corolla2025-3.png", "/car-corolla2025-int-1.jpeg", "/car-corolla2025-int-2.jpeg", "/car-corolla2025-int-3.jpeg"],
+  },
+  {
+    id: 37,
+    name: "Hyundai Accent 2022",
+    category: "economy",
+    image: "/car-accent-2.png",
+    seats: 5,
+    fuelType: "بنزين",
+    speed: "180 كم/س",
+    rating: 4.3,
+    colors: ["#ffffff", "#1a1a1a"],
+    features: ["محرك 1.6L", "120 حصان", "Apple CarPlay & Android Auto", "فتحة سقف"],
+    specs: {
+      engine: "محرك 4 سلندر إنلاين سعة 1.6 لتر، قوة 120 حصان، عزم 113 نيوتن.م، دفع أمامي",
+      transmission: "أوتوماتيكي CVT أو يدوي 6 سرعات",
+      interior: "شاشة 5 بوصة، بلوتوث، مثبت سرعة، تكييف، زجاج كهربائي، Apple CarPlay & Android Auto، فتحة سقف، تشغيل بمفتاح",
+      safety: "نظام الثبات الإلكتروني (ESC)، نظام التحكم بالجر، وسائد هوائية",
+    },
+    images: ["/car-accent-2.png", "/car-accent-3.png"],
   },
 
   // New Family Car
