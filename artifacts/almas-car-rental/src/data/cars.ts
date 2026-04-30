@@ -82,6 +82,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلد نابا، شاشة Uconnect مقاس 8.4 بوصة، جنوط 20 بوصة",
       safety: "نظام مساعدة الفرامل، رصد النقطة العمياء، وسائد هوائية جانبية",
     },
+    images: ["/car-challenger.jpg", "/car-challenger-side.jpeg", "/car-challenger-rear.png"],
   },
   {
     id: 4,
@@ -174,6 +175,7 @@ export const cars: Car[] = [
       interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
       safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
     },
+    images: ["/car-kona-studio.jpeg", "/car-tucson-int.png"],
   },
 
   // Economy
@@ -259,7 +261,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي، جودة مواد داخلية عالية، عزل صوتي ممتاز",
       safety: "رادار المشاة، نظام الكبح التلقائي الذكي",
     },
-    images: ["/car-byd-seal.jpeg", "/car-seal05-1.jpeg", "/car-seal05-2.jpeg", "/car-seal05-3.png"],
+    images: ["/car-byd-seal.jpeg", "/car-seal05-1.jpeg", "/car-seal05-2.jpeg", "/car-seal05-3.png", "/car-byd-seal-int1.jpeg", "/car-byd-seal-int2.jpeg", "/car-byd-seal-int3.jpeg", "/car-byd-seal-int4.jpeg"],
   },
   {
     id: 10,
@@ -278,7 +280,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
-    images: ["/car-accent.png", "/car-accent2024-rear.jpeg"],
+    images: ["/car-accent.png", "/car-accent2024-rear.jpeg", "/car-accent2024-int.png"],
   },
   {
     id: 11,
@@ -375,7 +377,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
       safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
     },
-    images: ["/car-mg5.png", "/car-mg5-rear.jpeg"],
+    images: ["/car-mg5.png", "/car-mg5-rear.jpeg", "/car-mg5-int.png"],
   },
 
   // Family
@@ -396,7 +398,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
       safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
     },
-    images: ["/car-jeep.webp", "/car-jeep2020-side.png", "/car-jeep2020-rear.png"],
+    images: ["/car-jeep.webp", "/car-jeep2020-rear.png"],
   },
   {
     id: 16,
@@ -457,13 +459,13 @@ export const cars: Car[] = [
       interior: "3 صفوف مقاعد جلد، شاشتين 12.3 بوصة، تبريد مقاعد، إضاءة محيطية",
       safety: "قيادة مساعدة ذكية، كاميرات 360، رادار النقاط العمياء الشامل",
     },
-    images: ["/car-sorento.png", "/car-sorento-2.jpeg", "/car-sorento-3.jpeg"],
+    images: ["/car-sorento.png", "/car-sorento-2.jpeg", "/car-sorento-3.jpeg", "/car-sorento-int1.jpeg", "/car-sorento-int2.jpeg", "/car-sorento-int3.jpeg"],
   },
   {
     id: 25,
     name: "Hyundai Tucson 2024",
     category: "family",
-    image: "/car-tucson2024.webp",
+    image: "/car-tucson2025-new.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "190 كم/س",
@@ -476,6 +478,7 @@ export const cars: Car[] = [
       interior: "تصميم خارجي جريء، مثبت سرعة، شاشة ترفيه",
       safety: "وسائد هوائية أمامية، نظام منع الانغلاق، كاميرا خلفية",
     },
+    images: ["/car-tucson2025-new.png", "/car-tucson-2.png", "/car-tucson-3.png", "/car-tucson-4.png", "/car-tucson-5.jpeg", "/car-tucson-6.jpeg", "/car-tucson-7.jpeg"],
   },
   {
     id: 26,
@@ -496,7 +499,7 @@ export const cars: Car[] = [
       interior: "كروس أوفر مرتفعة، شاشة Apple CarPlay، اقتصاد ممتاز للوقود",
       safety: "وسائد هوائية شاملة، نظام التوازن الميكانيكي، حساسات",
     },
-    images: ["/car-corolla-cross.png", "/car-corolla-cross-rear.jpeg"],
+    images: ["/car-corolla-cross.png", "/car-corolla-cross-side.jpeg", "/car-corolla-cross-rear.jpeg"],
   },
   {
     id: 27,
@@ -515,7 +518,7 @@ export const cars: Car[] = [
       interior: "حجم مدمج، شاشة ترفيه، إضاءة متفاعلة",
       safety: "حساسات ركن، كاميرا، نظام المساعدة في الصعود",
     },
-    images: ["/car-seltos-new.jpeg", "/car-seltos-1.jpeg", "/car-seltos-2.jpeg", "/car-seltos-3.jpeg"],
+    images: ["/car-seltos-new.jpeg", "/car-seltos-1.jpeg", "/car-seltos-2.jpeg", "/car-seltos-3.jpeg", "/car-seltos-int1.jpeg", "/car-seltos-int2.jpeg"],
   },
 
   // Luxury
@@ -636,7 +639,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
-    images: ["/car-mercedes-e.jpeg", "/car-merc-e-1.png", "/car-merc-e-2.jpeg"],
+    images: ["/car-mercedes-e.jpeg", "/car-merc-e-2.jpeg"],
   },
 
   // New Economy Cars
@@ -684,7 +687,7 @@ export const cars: Car[] = [
     id: 37,
     name: "Hyundai Accent 2022",
     category: "economy",
-    image: "/car-accent-2.png",
+    image: "/car-accent2022-main.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "180 كم/س",
@@ -697,7 +700,7 @@ export const cars: Car[] = [
       interior: "شاشة 5 بوصة، بلوتوث، مثبت سرعة، تكييف، زجاج كهربائي، Apple CarPlay & Android Auto، فتحة سقف، تشغيل بمفتاح",
       safety: "نظام الثبات الإلكتروني (ESC)، نظام التحكم بالجر، وسائد هوائية",
     },
-    images: ["/car-accent-2.png", "/car-accent-3.png"],
+    images: ["/car-accent2022-main.png", "/car-accent-2.png", "/car-accent-3.png"],
   },
 
   // New Family Car
