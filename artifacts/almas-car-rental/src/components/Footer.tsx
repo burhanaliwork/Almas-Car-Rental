@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gray-400 mt-0.5 shrink-0" />
-                <p className="text-sm text-gray-400">الموصل - حي البريد - قرب ترافيك لايت المصارف، مجاور خدمات كي كارد</p>
+                <p className="text-sm text-gray-400">الموصل - حي البريد - مجاور خدمات كي كارد مقابل فندق أبو جنه</p>
               </li>
             </ul>
           </div>
