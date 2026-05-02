@@ -607,7 +607,7 @@ export const cars: Car[] = [
     id: 23,
     name: "BMW 228i 2022",
     category: "luxury",
-    image: "/car-placeholder.svg",
+    image: "/bmw228-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "250 كم/س",
@@ -619,7 +619,7 @@ export const cars: Car[] = [
       interior: "شاشة عدادات رقمية، نظام iDrive المتطور، إضاءة داخلية محيطية، مقاعد رياضية SensaTec",
       safety: "نظام المساعدة في القيادة النشط، كشف النقاط العمياء، تنبيه مغادرة المسار",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/bmw228-1.jpg", "/bmw228-2.jpg", "/bmw228-3.jpg", "/bmw228-4.jpg", "/bmw228-5.jpg", "/bmw228-6.jpg", "/bmw228-7.jpg", "/bmw228-8.jpg", "/bmw228-9.jpg", "/bmw228-10.jpg", "/bmw228-11.jpg", "/bmw228-12.jpg", "/bmw228-13.jpg", "/bmw228-14.jpg", "/bmw228-15.jpg", "/bmw228-16.jpg"],
   },
   {
     id: 24,
