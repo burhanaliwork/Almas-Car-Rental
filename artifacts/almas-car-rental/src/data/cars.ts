@@ -587,7 +587,7 @@ export const cars: Car[] = [
     id: 22,
     name: "Range Rover SVR 2022",
     category: "luxury",
-    image: "https://images.unsplash.com/photo-1551830820-330a71b99659?w=800&h=600&fit=crop",
+    image: "/rrsvr-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "280 كم/س",
@@ -601,6 +601,7 @@ export const cars: Car[] = [
       interior: "مقاعد رياضية SVR، ديكورات ألياف الكربون، سقف بانورامي",
       safety: "فرامل بريمبو عالية الأداء، نظام الثبات على المنعطفات، حساسات محيطية",
     },
+    images: ["/rrsvr-1.jpg", "/rrsvr-2.jpg", "/rrsvr-3.jpg", "/rrsvr-4.jpg", "/rrsvr-5.jpg", "/rrsvr-6.jpg", "/rrsvr-7.jpg", "/rrsvr-8.jpg", "/rrsvr-9.jpg", "/rrsvr-10.jpg", "/rrsvr-11.jpg", "/rrsvr-12.jpg", "/rrsvr-13.jpg"],
   },
   {
     id: 23,
