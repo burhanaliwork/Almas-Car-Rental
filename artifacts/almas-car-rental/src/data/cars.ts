@@ -524,9 +524,9 @@ export const cars: Car[] = [
   // Luxury
   {
     id: 19,
-    name: "GMC Yukon Denali 2025",
+    name: "GMC Yukon Denali 2024",
     category: "luxury",
-    image: "/car-placeholder.svg",
+    image: "/yukon-1.jpg",
     seats: 7,
     fuelType: "بنزين",
     speed: "220 كم/س",
@@ -541,7 +541,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
       safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/yukon-1.jpg", "/yukon-2.jpg", "/yukon-3.jpg", "/yukon-4.jpg", "/yukon-5.jpg", "/yukon-6.jpg", "/yukon-7.jpg", "/yukon-8.jpg", "/yukon-9.jpg", "/yukon-10.jpg", "/yukon-11.jpg", "/yukon-12.jpg", "/yukon-13.jpg", "/yukon-14.jpg", "/yukon-15.jpg", "/yukon-16.jpg", "/yukon-17.jpg", "/yukon-18.jpg", "/yukon-19.jpg", "/yukon-20.jpg"],
   },
   {
     id: 20,
