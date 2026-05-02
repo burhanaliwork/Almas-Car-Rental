@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, Calendar, User, MapPin, FileText, CheckCircle } from "lucide-react";
 
 const WHATSAPP_URL = "https://wa.me/9647735256513";
@@ -19,6 +19,15 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
     location: "",
     purpose: "",
   });
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -46,7 +55,7 @@ export default function BookingModal({ isOpen, onClose, carName }: BookingModalP
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" data-testid="booking-modal">
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={handleClose} />
-      <div className="relative bg-card border border-card-border rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto">
+      <div className="relative bg-card border border-card-border rounded-2xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto overscroll-contain">
         <div className="flex items-center justify-between p-5 border-b border-border">
           <div>
             <h2 className="text-lg font-bold text-foreground">حجز السيارة</h2>

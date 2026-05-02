@@ -19,6 +19,15 @@ export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: 
 
   useEffect(() => {
     if (!isOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
       if (e.key === "ArrowRight") setCurrent((p) => (p > 0 ? p - 1 : images.length - 1));
@@ -58,7 +67,7 @@ export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: 
       dir="rtl"
     >
       <div
-        className="relative w-full max-w-3xl bg-black rounded-2xl overflow-hidden shadow-2xl"
+        className="relative w-full max-w-3xl bg-black rounded-2xl overflow-hidden shadow-2xl max-h-[95vh] overflow-y-auto overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

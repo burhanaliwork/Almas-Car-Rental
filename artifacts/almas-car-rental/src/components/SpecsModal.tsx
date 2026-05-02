@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { X, Zap, Settings, Armchair, Shield } from "lucide-react";
 import { CarSpecs } from "@/data/cars";
 
@@ -9,6 +10,15 @@ interface SpecsModalProps {
 }
 
 export default function SpecsModal({ isOpen, onClose, carName, specs }: SpecsModalProps) {
+  useEffect(() => {
+    if (!isOpen) return;
+    const original = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
@@ -18,7 +28,7 @@ export default function SpecsModal({ isOpen, onClose, carName, specs }: SpecsMod
     >
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
       <div
-        className="relative bg-card border border-card-border rounded-3xl shadow-2xl w-full max-w-md"
+        className="relative bg-card border border-card-border rounded-3xl shadow-2xl w-full max-w-md max-h-[90vh] overflow-y-auto overscroll-contain"
         onClick={(e) => e.stopPropagation()}
         dir="rtl"
       >
