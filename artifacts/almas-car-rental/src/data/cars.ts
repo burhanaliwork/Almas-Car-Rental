@@ -625,7 +625,7 @@ export const cars: Car[] = [
     id: 24,
     name: "Mercedes E Class 2022",
     category: "luxury",
-    image: "/car-placeholder.svg",
+    image: "/merc-e-1.png",
     seats: 5,
     fuelType: "هجين",
     speed: "250 كم/س",
@@ -639,7 +639,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/merc-e-1.png", "/merc-e-2.png", "/merc-e-3.png", "/merc-e-4.png", "/merc-e-5.png", "/merc-e-6.png", "/merc-e-7.png", "/merc-e-8.png"],
   },
 
   // New Economy Cars
@@ -752,7 +752,7 @@ export const cars: Car[] = [
     id: 36,
     name: "BMW 525i xDrive",
     category: "luxury",
-    image: "/car-placeholder.svg",
+    image: "/bmw525-1.png",
     seats: 5,
     fuelType: "بنزين",
     speed: "250 كم/س",
@@ -766,7 +766,7 @@ export const cars: Car[] = [
       interior: "شاشة iDrive 12.3 بوصة، مقاعد جلد ناباصوفت، نظام صوت Harman Kardon، إضاءة محيطية",
       safety: "نظام مساعدة القيادة BMW، كشف النقاط العمياء، تنبيه مغادرة المسار، رادار أمامي",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/bmw525-1.png", "/bmw525-2.png", "/bmw525-3.png", "/bmw525-4.png", "/bmw525-5.png", "/bmw525-6.png", "/bmw525-7.jpeg"],
   },
 ];
 
