@@ -639,7 +639,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
-    images: ["/merc-e-1.jpg", "/merc-e-2.jpg", "/merc-e-3.jpg", "/merc-e-4.jpg", "/merc-e-5.jpg", "/merc-e-6.jpg", "/merc-e-7.jpg", "/merc-e-8.jpg"],
+    images: ["/merc-e-1.jpg", "/merc-e-2.jpg", "/merc-e-3.jpg", "/merc-e-4.jpg", "/merc-e-5.jpg", "/merc-e-6.jpg", "/merc-e-7.jpg", "/merc-e-8.jpg", "/merc-e-9.jpg", "/merc-e-10.jpg", "/merc-e-11.jpg", "/merc-e-12.jpg", "/merc-e-13.jpg", "/merc-e-14.jpg", "/merc-e-15.jpg", "/merc-e-16.jpg", "/merc-e-17.jpg", "/merc-e-18.jpg", "/merc-e-19.jpg", "/merc-e-20.jpg"],
   },
 
   // New Economy Cars
@@ -766,7 +766,7 @@ export const cars: Car[] = [
       interior: "شاشة iDrive 12.3 بوصة، مقاعد جلد ناباصوفت، نظام صوت Harman Kardon، إضاءة محيطية",
       safety: "نظام مساعدة القيادة BMW، كشف النقاط العمياء، تنبيه مغادرة المسار، رادار أمامي",
     },
-    images: ["/bmw525-1.jpg", "/bmw525-2.jpg", "/bmw525-3.jpg", "/bmw525-4.jpg", "/bmw525-5.jpg", "/bmw525-6.jpg", "/bmw525-7.jpeg"],
+    images: ["/bmw525-1.jpg", "/bmw525-2.jpg", "/bmw525-3.jpg", "/bmw525-4.jpg", "/bmw525-5.jpg", "/bmw525-6.jpg", "/bmw525-7.jpeg", "/bmw525-8.jpg", "/bmw525-9.jpg", "/bmw525-10.jpg", "/bmw525-11.jpg", "/bmw525-12.jpg", "/bmw525-13.jpg", "/bmw525-14.jpg"],
   },
 ];
 
