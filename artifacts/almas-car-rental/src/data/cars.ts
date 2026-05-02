@@ -43,6 +43,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي كلاسيكي، عدادات رقمية قابلة للتخصيص، نظام الترفيه Sync 3",
       safety: "نظام MyKey للمراقبة، فرامل ABS، وسائد هوائية لحماية الركبة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 2,
@@ -60,6 +61,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، وضعيات قيادة متعددة، مقاعد رياضية مريحة",
       safety: "كاميرا خلفية، نظام تنبيه المنطقة العمياء، هيكل فولاذي صلب",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 3,
@@ -80,6 +82,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلد نابا، شاشة Uconnect مقاس 8.4 بوصة، جنوط 20 بوصة",
       safety: "نظام مساعدة الفرامل، رصد النقطة العمياء، وسائد هوائية جانبية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 4,
@@ -97,6 +100,7 @@ export const cars: Car[] = [
       interior: "نظام صوتي Alpine، تصميم خارجي بلمسات سوداء، مقاعد جلدية رياضية",
       safety: "تنبيه مغادرة المسار، مثبت سرعة ذكي، حساسات ركن شاملة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 5,
@@ -115,6 +119,7 @@ export const cars: Car[] = [
       interior: "غطاء محرك رياضي، مقاعد رياضية، نظام ترفيه Uconnect",
       safety: "نظام تنبيه التصادم، كاميرا بارك فيو، التحكم الإلكتروني بالثبات",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 6,
@@ -132,6 +137,7 @@ export const cars: Car[] = [
       interior: "مصابيح LED، شاشة معلومات، مقاعد مخمل، تحكم بالمقود",
       safety: "6 وسائد هوائية، نظام منع الانزلاق، حساسات خلفية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 28,
@@ -151,6 +157,7 @@ export const cars: Car[] = [
       interior: "تصميم انسيابي، شاشة لمس 8 بوصة، تكييف يدوي، LED نهاري",
       safety: "مساعد تجنب الاصطدام، تنبيه انتباه السائق، وسائد أمامية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 29,
@@ -168,6 +175,7 @@ export const cars: Car[] = [
       interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
       safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // Economy
@@ -190,6 +198,7 @@ export const cars: Car[] = [
       interior: "مقاعد قماش، شاشة معلومات، تحكم بالصوت",
       safety: "وسائد هوائية أمامية، نظام مانع الانزلاق",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 8,
@@ -210,6 +219,7 @@ export const cars: Car[] = [
       interior: "تصميم انسيابي، إضاءة LED، فتحات تكييف خلفية",
       safety: "نظام تثبيت السرعة، كاميرا، حساسات خلفية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 9,
@@ -230,6 +240,7 @@ export const cars: Car[] = [
       interior: "شاشة دوارة، مقاعد جلد فاخرة، تقنيات ذكية",
       safety: "كاميرات 360، قيادة شبه ذاتية، حساسات محيطية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 31,
@@ -250,6 +261,7 @@ export const cars: Car[] = [
       interior: "تصميم رياضي، جودة مواد داخلية عالية، عزل صوتي ممتاز",
       safety: "رادار المشاة، نظام الكبح التلقائي الذكي",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 10,
@@ -268,6 +280,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، تكييف خلفي، تصميم خارجي حديث",
       safety: "حساسات خلفية، نظام ABS، مراقبة ضغط الإطارات",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 11,
@@ -286,6 +299,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، مفتاح ذكي، كفاءة استهلاك وقود عالية",
       safety: "تحذير تصادم أمامي، كبح طوارئ، وسائد هوائية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 12,
@@ -304,6 +318,7 @@ export const cars: Car[] = [
       interior: "شاشة 8 بوصة، دعم Apple CarPlay، بلوتوث، تحكم بالمقود",
       safety: "وسائد هوائية أمامية، نظام الثبات الإلكتروني، المساعدة على صعود التلال",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 13,
@@ -321,6 +336,7 @@ export const cars: Car[] = [
       interior: "تصميم عصري، شاشة عرض مدمجة، تكييف خلفي",
       safety: "6 وسائد هوائية قياسية، نظام المساعدة في المسار",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 14,
@@ -340,6 +356,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 30,
@@ -360,6 +377,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية، فتحة سقف، شاشة لمس كبيرة",
       safety: "4 كاميرات، فرامل يد إلكترونية، وسائد هوائية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // Family
@@ -380,6 +398,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، دخول ذكي، مقاعد مريحة للرحلات",
       safety: "كشف الأجسام المتقاطعة، حساسات ركن، وسائد هوائية متعددة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 16,
@@ -400,6 +419,7 @@ export const cars: Car[] = [
       interior: "فتحة سقف بانورامية، شاشة، كاميرا، تشغيل عن بعد",
       safety: "فرامل ABS، نظام المساعدة في المرتفعات، حساسات إطارات",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 17,
@@ -418,6 +438,7 @@ export const cars: Car[] = [
       interior: "شاشة مزدوجة منحنية، Apple CarPlay، فتحة سقف بانورامية",
       safety: "نظام الأمان الشامل، وسائد هوائية متعددة، كاميرا خلفية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 18,
@@ -438,6 +459,7 @@ export const cars: Car[] = [
       interior: "3 صفوف مقاعد جلد، شاشتين 12.3 بوصة، تبريد مقاعد، إضاءة محيطية",
       safety: "قيادة مساعدة ذكية، كاميرات 360، رادار النقاط العمياء الشامل",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 25,
@@ -456,6 +478,7 @@ export const cars: Car[] = [
       interior: "تصميم خارجي جريء، مثبت سرعة، شاشة ترفيه",
       safety: "وسائد هوائية أمامية، نظام منع الانغلاق، كاميرا خلفية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 26,
@@ -476,6 +499,7 @@ export const cars: Car[] = [
       interior: "كروس أوفر مرتفعة، شاشة Apple CarPlay، اقتصاد ممتاز للوقود",
       safety: "وسائد هوائية شاملة، نظام التوازن الميكانيكي، حساسات",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 27,
@@ -494,6 +518,7 @@ export const cars: Car[] = [
       interior: "حجم مدمج، شاشة ترفيه، إضاءة متفاعلة",
       safety: "حساسات ركن، كاميرا، نظام المساعدة في الصعود",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // Luxury
@@ -516,6 +541,7 @@ export const cars: Car[] = [
       interior: "مقاعد جلدية فاخرة، شاشة عرض كبيرة، نظام صوتي Bose، تبريد وتدفئة المقاعد",
       safety: "نظام القيادة الذاتية Super Cruise، فرملة طوارئ تلقائية، كاميرات رؤية محيطية 360 درجة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 20,
@@ -536,6 +562,7 @@ export const cars: Car[] = [
       interior: "شاشة ملاحة، فتحة سقف، ثلاجة داخلية، إضاءة عتبات ليمتد",
       safety: "نظام تويوتا للأمان (TSS)، وسائد هوائية كاملة، نظام الزحف والدوران",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 21,
@@ -554,6 +581,7 @@ export const cars: Car[] = [
       interior: "شاشات خلفية، مقاعد منفصلة في الصف الثاني، نظام تعليق مغناطيسي مريح",
       safety: "تنبيه تصادم أمامي، مساعد البقاء في المسار، رادار كشف المشاة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 22,
@@ -573,6 +601,7 @@ export const cars: Car[] = [
       interior: "مقاعد رياضية SVR، ديكورات ألياف الكربون، سقف بانورامي",
       safety: "فرامل بريمبو عالية الأداء، نظام الثبات على المنعطفات، حساسات محيطية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 23,
@@ -590,6 +619,7 @@ export const cars: Car[] = [
       interior: "شاشة عدادات رقمية، نظام iDrive المتطور، إضاءة داخلية محيطية، مقاعد رياضية SensaTec",
       safety: "نظام المساعدة في القيادة النشط، كشف النقاط العمياء، تنبيه مغادرة المسار",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 24,
@@ -609,6 +639,7 @@ export const cars: Car[] = [
       interior: "شاشات عرض مزدوجة، نظام MBUX، إضاءة 64 لون، جلود فاخرة",
       safety: "نظام Pre-Safe، مكابح طوارئ نشطة، رادار أمامي ذكي",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // New Economy Cars
@@ -629,6 +660,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، Apple CarPlay، تكييف تلقائي، مقاعد قماشية مريحة",
       safety: "كاميرا خلفية، وسائد هوائية أمامية، نظام ABS، مثبت السرعة",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 33,
@@ -649,6 +681,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس 8 بوصة، Apple CarPlay & Android Auto، تحكم مناخي تلقائي",
       safety: "Toyota Safety Sense، 8 وسائد هوائية، نظام الثبات الإلكتروني، كاميرا خلفية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 37,
@@ -667,6 +700,7 @@ export const cars: Car[] = [
       interior: "شاشة 5 بوصة، بلوتوث، مثبت سرعة، تكييف، زجاج كهربائي، Apple CarPlay & Android Auto، فتحة سقف، تشغيل بمفتاح",
       safety: "نظام الثبات الإلكتروني (ESC)، نظام التحكم بالجر، وسائد هوائية",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // New Family Car
@@ -689,6 +723,7 @@ export const cars: Car[] = [
       interior: "شاشة Uconnect 10.1 بوصة، مقاعد جلدية، تسخين مقاعد، فتحة سقف بانورامية",
       safety: "كاميرا 360°، رادار كشف الأجسام، وسائد هوائية متعددة، مساعد البقاء في المسار",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // New Sports Car
@@ -709,6 +744,7 @@ export const cars: Car[] = [
       interior: "شاشة 9 بوصة، Apple CarPlay، مقاعد مخمل فاخرة، تحكم مناخي مزدوج",
       safety: "Toyota Safety Sense 2.0، 8 وسائد هوائية، نظام منع الانزلاق، كاميرا خلفية HD",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 
   // New Luxury Car
@@ -730,6 +766,7 @@ export const cars: Car[] = [
       interior: "شاشة iDrive 12.3 بوصة، مقاعد جلد ناباصوفت، نظام صوت Harman Kardon، إضاءة محيطية",
       safety: "نظام مساعدة القيادة BMW، كشف النقاط العمياء، تنبيه مغادرة المسار، رادار أمامي",
     },
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
 ];
 
