@@ -547,7 +547,7 @@ export const cars: Car[] = [
     id: 20,
     name: "Land Cruiser GXR 2025",
     category: "luxury",
-    image: "/lc-1.jpg",
+    image: "/car-placeholder.svg",
     seats: 7,
     fuelType: "بنزين",
     speed: "210 كم/س",
@@ -562,7 +562,7 @@ export const cars: Car[] = [
       interior: "شاشة ملاحة، فتحة سقف، ثلاجة داخلية، إضاءة عتبات ليمتد",
       safety: "نظام تويوتا للأمان (TSS)، وسائد هوائية كاملة، نظام الزحف والدوران",
     },
-    images: ["/lc-1.jpg", "/lc-2.jpg", "/lc-3.jpg", "/lc-4.jpg", "/lc-5.jpg", "/lc-6.jpg", "/lc-7.jpg", "/lc-8.jpg", "/lc-9.jpg", "/lc-10.jpg"],
+    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
   },
   {
     id: 21,
