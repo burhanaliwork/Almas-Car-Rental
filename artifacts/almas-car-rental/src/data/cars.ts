@@ -566,9 +566,9 @@ export const cars: Car[] = [
   },
   {
     id: 21,
-    name: "Chevrolet Tahoe 2024",
+    name: "Chevrolet Tahoe Premier 2024",
     category: "luxury",
-    image: "/car-placeholder.svg",
+    image: "/tahoe-1.jpg",
     seats: 8,
     fuelType: "بنزين",
     speed: "205 كم/س",
@@ -581,7 +581,7 @@ export const cars: Car[] = [
       interior: "شاشات خلفية، مقاعد منفصلة في الصف الثاني، نظام تعليق مغناطيسي مريح",
       safety: "تنبيه تصادم أمامي، مساعد البقاء في المسار، رادار كشف المشاة",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/tahoe-1.jpg", "/tahoe-2.jpg", "/tahoe-3.jpg", "/tahoe-4.jpg", "/tahoe-5.jpg", "/tahoe-6.jpg", "/tahoe-7.jpg", "/tahoe-8.jpg", "/tahoe-9.jpg", "/tahoe-10.jpg", "/tahoe-11.jpg", "/tahoe-12.jpg", "/tahoe-13.jpg"],
   },
   {
     id: 22,
