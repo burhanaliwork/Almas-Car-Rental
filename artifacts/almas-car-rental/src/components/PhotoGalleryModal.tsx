@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { X, ChevronRight, ChevronLeft } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { X } from "lucide-react";
 
 interface PhotoGalleryModalProps {
   isOpen: boolean;
@@ -10,6 +10,8 @@ interface PhotoGalleryModalProps {
 
 export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: PhotoGalleryModalProps) {
   const [current, setCurrent] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   useEffect(() => {
     if (!isOpen) setCurrent(0);
@@ -28,8 +30,26 @@ export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: 
 
   if (!isOpen) return null;
 
-  const prev = () => setCurrent((p) => (p > 0 ? p - 1 : images.length - 1));
-  const next = () => setCurrent((p) => (p < images.length - 1 ? p + 1 : 0));
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+      // RTL: swipe right = previous, swipe left = next
+      if (dx > 0) {
+        setCurrent((p) => (p > 0 ? p - 1 : images.length - 1));
+      } else {
+        setCurrent((p) => (p < images.length - 1 ? p + 1 : 0));
+      }
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   return (
     <div
@@ -42,49 +62,59 @@ export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: 
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <h2 className="text-white font-bold text-lg">{carName}</h2>
-          <div className="flex items-center gap-3">
-            <span className="text-white/50 text-sm">{current + 1} / {images.length}</span>
+        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10 bg-black">
+          <h2 className="text-white font-bold text-lg truncate">{carName}</h2>
+          <div className="flex items-center gap-3 flex-shrink-0">
+            <span className="text-white/70 text-sm font-bold">{current + 1} / {images.length}</span>
             <button
               onClick={onClose}
-              className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              aria-label="إغلاق"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-600 hover:bg-red-700 text-white font-bold text-sm shadow-lg transition-colors active:scale-95"
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" strokeWidth={3} />
+              <span>إغلاق</span>
             </button>
           </div>
         </div>
 
-        {/* Main image */}
-        <div className="relative bg-gray-950 flex items-center justify-center" style={{ minHeight: 380 }}>
+        {/* Main image with swipe */}
+        <div
+          className="relative bg-gray-950 flex items-center justify-center select-none"
+          style={{ minHeight: 380, touchAction: "pan-y" }}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
           <img
             key={current}
             src={images[current]}
             alt={`${carName} - ${current + 1}`}
-            className="max-h-[420px] w-full object-contain"
+            className="max-h-[420px] w-full object-contain pointer-events-none"
+            draggable={false}
           />
-
           {images.length > 1 && (
-            <>
-              <button
-                onClick={prev}
-                className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-              <button
-                onClick={next}
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/60 hover:bg-black/80 flex items-center justify-center text-white transition-colors"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-            </>
+            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-black/60 px-3 py-1.5 rounded-full pointer-events-none">
+              {images.map((_, i) => (
+                <span
+                  key={i}
+                  className={`block rounded-full transition-all ${
+                    i === current ? "w-5 h-1.5 bg-white" : "w-1.5 h-1.5 bg-white/50"
+                  }`}
+                />
+              ))}
+            </div>
           )}
         </div>
 
+        {/* Hint text */}
+        {images.length > 1 && (
+          <div className="text-center text-white/60 text-xs py-2 bg-black border-t border-white/5">
+            اسحب يميناً أو يساراً لتغيير الصورة
+          </div>
+        )}
+
         {/* Thumbnails */}
         {images.length > 1 && (
-          <div className="flex gap-2 p-3 overflow-x-auto bg-black/60">
+          <div className="flex gap-2 p-3 overflow-x-auto bg-black/80">
             {images.map((img, i) => (
               <button
                 key={i}
@@ -93,7 +123,7 @@ export default function PhotoGalleryModal({ isOpen, onClose, carName, images }: 
                   i === current ? "border-white" : "border-white/20 opacity-60 hover:opacity-90"
                 }`}
               >
-                <img src={img} alt="" className="w-full h-full object-cover" />
+                <img src={img} alt="" className="w-full h-full object-cover" loading="lazy" />
               </button>
             ))}
           </div>
