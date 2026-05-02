@@ -666,7 +666,7 @@ export const cars: Car[] = [
     id: 33,
     name: "Toyota Corolla 2025",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/car-corolla2025.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "195 كم/س",
@@ -681,7 +681,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس 8 بوصة، Apple CarPlay & Android Auto، تحكم مناخي تلقائي",
       safety: "Toyota Safety Sense، 8 وسائد هوائية، نظام الثبات الإلكتروني، كاميرا خلفية",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/car-corolla2025.jpg", "/car-corolla2025-2.jpg", "/car-corolla2025-3.jpg", "/car-corolla2025-int-1.jpg", "/car-corolla2025-int-2.jpg", "/car-corolla2025-int-3.jpg"],
   },
   {
     id: 37,
