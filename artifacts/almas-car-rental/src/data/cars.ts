@@ -305,7 +305,7 @@ export const cars: Car[] = [
     id: 12,
     name: "Kia Rio 2023",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/rio-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "182 كم/س",
@@ -318,7 +318,7 @@ export const cars: Car[] = [
       interior: "شاشة 8 بوصة، دعم Apple CarPlay، بلوتوث، تحكم بالمقود",
       safety: "وسائد هوائية أمامية، نظام الثبات الإلكتروني، المساعدة على صعود التلال",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/rio-1.jpg", "/rio-2.jpg", "/rio-3.jpg", "/rio-4.jpg", "/rio-5.jpg", "/rio-6.jpg", "/rio-7.jpg", "/rio-8.jpg", "/rio-9.jpg", "/rio-10.jpg"],
   },
   {
     id: 13,
