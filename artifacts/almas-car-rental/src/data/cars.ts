@@ -194,9 +194,9 @@ export const cars: Car[] = [
   },
   {
     id: 29,
-    name: "Hyundai Kona N Line 2025",
+    name: "Hyundai Kona N Line 2023",
     category: "sports",
-    image: "/car-placeholder.svg",
+    image: "/kona-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "240 كم/س",
@@ -208,7 +208,19 @@ export const cars: Car[] = [
       interior: "لمسات رياضية حمراء، مقاعد N Line، تصميم خارجي هجومي",
       safety: "رؤية محيطية، مراقبة النقطة العمياء، رادار رصد المشاة",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: [
+      "/kona-1.jpg",
+      "/kona-2.jpg",
+      "/kona-3.jpg",
+      "/kona-4.jpg",
+      "/kona-5.jpg",
+      "/kona-6.jpg",
+      "/kona-7.jpg",
+      "/kona-8.jpg",
+      "/kona-9.jpg",
+      "/kona-10.jpg",
+      "/kona-11.jpg",
+    ],
   },
 
   // Economy
