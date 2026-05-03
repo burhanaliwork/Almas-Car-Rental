@@ -342,7 +342,7 @@ export const cars: Car[] = [
     id: 14,
     name: "Kia K4 2025",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/k4-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "195 كم/س",
@@ -356,7 +356,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/k4-1.jpg", "/k4-2.jpg", "/k4-3.jpg", "/k4-4.jpg", "/k4-5.jpg", "/k4-6.jpg", "/k4-7.jpg", "/k4-8.jpg", "/k4-9.jpg", "/k4-10.jpg", "/k4-11.jpg"],
   },
   {
     id: 30,
