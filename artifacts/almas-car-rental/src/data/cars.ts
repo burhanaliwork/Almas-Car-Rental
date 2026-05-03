@@ -356,7 +356,7 @@ export const cars: Car[] = [
       interior: "تصميم مستقبلي، شاشات بانورامية، مساحة خلفية واسعة",
       safety: "حزمة أمان كيا المتطورة (ADAS)، رصد النقطة العمياء",
     },
-    images: ["/k4-1.jpg", "/k4-2.jpg", "/k4-3.jpg", "/k4-4.jpg", "/k4-5.jpg", "/k4-6.jpg", "/k4-7.jpg", "/k4-8.jpg", "/k4-9.jpg", "/k4-10.jpg", "/k4-11.jpg"],
+    images: ["/k4-1.jpg", "/k4-2.jpg", "/k4-3.jpg", "/k4-4.jpg", "/k4-5.jpg", "/k4-6.jpg", "/k4-7.jpg", "/k4-8.jpg", "/k4-9.jpg", "/k4-10.jpg", "/k4-11.jpg", "/k4-12.jpg", "/k4-13.jpg", "/k4-14.jpg"],
   },
   {
     id: 30,
