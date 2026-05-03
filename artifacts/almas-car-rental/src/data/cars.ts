@@ -809,7 +809,7 @@ export const cars: Car[] = [
     id: 34,
     name: "Jeep Grand Cherokee 2024",
     category: "family",
-    image: "/car-placeholder.svg",
+    image: "/cherokee24-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "210 كم/س",
@@ -824,7 +824,16 @@ export const cars: Car[] = [
       interior: "شاشة Uconnect 10.1 بوصة، مقاعد جلدية، تسخين مقاعد، فتحة سقف بانورامية",
       safety: "كاميرا 360°، رادار كشف الأجسام، وسائد هوائية متعددة، مساعد البقاء في المسار",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: [
+      "/cherokee24-1.jpg",
+      "/cherokee24-2.jpg",
+      "/cherokee24-3.jpg",
+      "/cherokee24-4.jpg",
+      "/cherokee24-5.jpg",
+      "/cherokee24-6.jpg",
+      "/cherokee24-7.jpg",
+      "/cherokee24-8.jpg",
+    ],
   },
 
   // New Sports Car
