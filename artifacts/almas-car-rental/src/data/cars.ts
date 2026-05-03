@@ -286,7 +286,7 @@ export const cars: Car[] = [
     id: 11,
     name: "Nissan Sunny 2025",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/sunny-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "180 كم/س",
@@ -299,7 +299,7 @@ export const cars: Car[] = [
       interior: "شاشة 7 بوصة، مفتاح ذكي، كفاءة استهلاك وقود عالية",
       safety: "تحذير تصادم أمامي، كبح طوارئ، وسائد هوائية",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/sunny-1.jpg", "/sunny-2.jpg", "/sunny-3.jpg", "/sunny-4.jpg", "/sunny-5.jpg", "/sunny-6.jpg", "/sunny-7.jpg", "/sunny-8.jpg", "/sunny-9.jpg", "/sunny-10.jpg"],
   },
   {
     id: 12,
