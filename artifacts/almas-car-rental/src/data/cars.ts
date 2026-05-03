@@ -647,7 +647,7 @@ export const cars: Car[] = [
     id: 32,
     name: "Nissan Sentra 2023",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/sentra-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "185 كم/س",
@@ -660,7 +660,7 @@ export const cars: Car[] = [
       interior: "شاشة لمس، Apple CarPlay، تكييف تلقائي، مقاعد قماشية مريحة",
       safety: "كاميرا خلفية، وسائد هوائية أمامية، نظام ABS، مثبت السرعة",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/sentra-1.jpg", "/sentra-2.jpg", "/sentra-3.jpg", "/sentra-4.jpg", "/sentra-5.jpg", "/sentra-6.jpg", "/sentra-7.jpg", "/sentra-8.jpg", "/sentra-9.jpg"],
   },
   {
     id: 33,
@@ -687,7 +687,7 @@ export const cars: Car[] = [
     id: 37,
     name: "Hyundai Accent 2022",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/accent22-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "180 كم/س",
@@ -700,7 +700,7 @@ export const cars: Car[] = [
       interior: "شاشة 5 بوصة، بلوتوث، مثبت سرعة، تكييف، زجاج كهربائي، Apple CarPlay & Android Auto، فتحة سقف، تشغيل بمفتاح",
       safety: "نظام الثبات الإلكتروني (ESC)، نظام التحكم بالجر، وسائد هوائية",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/accent22-1.jpg", "/accent22-2.jpg", "/accent22-3.jpg", "/accent22-4.jpg", "/accent22-5.jpg", "/accent22-6.jpg", "/accent22-7.jpg", "/accent22-8.jpg", "/accent22-9.jpg", "/accent22-10.jpg"],
   },
 
   // New Family Car
