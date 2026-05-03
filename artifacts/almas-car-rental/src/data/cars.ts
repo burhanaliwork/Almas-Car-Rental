@@ -324,7 +324,7 @@ export const cars: Car[] = [
     id: 13,
     name: "Kia K3 2025",
     category: "economy",
-    image: "/car-placeholder.svg",
+    image: "/k3-1.jpg",
     seats: 5,
     fuelType: "بنزين",
     speed: "190 كم/س",
@@ -336,7 +336,7 @@ export const cars: Car[] = [
       interior: "تصميم عصري، شاشة عرض مدمجة، تكييف خلفي",
       safety: "6 وسائد هوائية قياسية، نظام المساعدة في المسار",
     },
-    images: ["/car-placeholder.svg", "/car-placeholder.svg"],
+    images: ["/k3-1.jpg", "/k3-2.jpg", "/k3-3.jpg", "/k3-4.jpg", "/k3-5.jpg", "/k3-6.jpg", "/k3-7.jpg"],
   },
   {
     id: 14,
