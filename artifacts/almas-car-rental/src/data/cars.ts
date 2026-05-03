@@ -213,7 +213,6 @@ export const cars: Car[] = [
       "/k5-11.jpg",
       "/k5-12.jpg",
       "/k5-13.jpg",
-      "/k5-14.jpg",
     ],
   },
   {
